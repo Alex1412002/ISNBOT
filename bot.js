@@ -8,7 +8,7 @@ client.on('message', message => {
         message.reply('pong');
     }
 });
-bot.on('message', msg =>{
+client.on('message', msg =>{
     if(msg.content.match(/salut/i)){
         msg.channel.send("Cc")
     }
