@@ -5,24 +5,27 @@ client.on('ready', () => {
 });
 client.on('message', message => {
     if (message.content === 'ping') {
-        message.reply('pong');
+        message.channel.send('pong');
     }
 });
-client.on('message', msg =>{
-    if(msg.content.match(/salut/i)){
-        msg.channel.send("Cc")
+client.on('message', message =>{
+    if(message.content.match(/salut/i)){
+        message.channel.send("Cc")
     }
-    if(msg.content.match(/cc/i)){
-        msg.channel.send("comment allez vous aujourd'hui ?")
+    if(message.content.match(/cc/i)){
+        message.channel.send("comment allez vous aujourd'hui ?")
     }
-    if(msg.content.match(/wsh/i)){
-        msg.channel.send("Yo le frero")
+    if(message.content.match(/wsh/i)){
+        message.channel.send("Yo le frero")
     }
-    if(msg.content.match(/slt/i)){
-        msg.channel.send("Coucou chérie")
+    if(message.content.match(/slt/i)){
+        message.channel.send("Coucou chérie")
     }
-    if(msg.content.match(/bonjour/i)){
-        msg.channel.send("hey")
+    if(message.content.match(/bonjour/i)){
+       message.channel.send("hey")
+    }
+    if(message.content === '.gregoire') {
+        message.channel.send("Au secours ! Nous sommes Envahis. 3 créatures de type gregoire, peut ergonomique par dessus le marché sont ici. Fuyez !!!")
     }
 });
 client.login(process.env.BOT_TOKEN);
