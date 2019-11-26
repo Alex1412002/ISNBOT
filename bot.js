@@ -29,8 +29,8 @@ client.on('message', message =>{
     }
 });
 client.on(‘message’, (receivedMessage) => {
-    If (receivedMessage.author === guildMember(‘alex’){
+    If (receivedMessage.author === guildMember(‘alex’)){
         message.channel.send(‘ta gueule’)
-    )}
+    }
 });
 client.login(process.env.BOT_TOKEN);
