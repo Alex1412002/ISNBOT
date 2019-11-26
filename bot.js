@@ -30,7 +30,9 @@ client.on('message', message =>{
 });
 client.on('message', (receivedMessage) => {
     If (receivedMessage.author === 'alex') {
-        message.channel.send('ta gueule');
+        client.on('message', message => {
+            message.channel.send('ta gueule');
+        });
     }
 });
 client.login(process.env.BOT_TOKEN);
