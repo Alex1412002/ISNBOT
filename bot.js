@@ -29,7 +29,7 @@ client.on('message', message =>{
     }
 });
 client.on(‘message’, (receivedMessage) => {
-    If (receivedMessage.author === guildMember(‘alex’)){
+    If (receivedMessage.author === ‘alex’) {
         message.channel.send(‘ta gueule’)
     }
 });
