@@ -29,8 +29,8 @@ client.on('message', message =>{
     }
 });
 client.on('message', message  => {
-    If (message.author === 'alex') {
-        message.channel.send('ta gueule');      
-    }
+     if(message.author.tag === 'Nine-Eagle#7414' ) {
+        message.channel.send('ta gueule')     
+     }
 });
 client.login(process.env.BOT_TOKEN);
