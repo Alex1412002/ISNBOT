@@ -28,7 +28,7 @@ client.on('message', message =>{
         message.channel.send("Au secours ! Nous sommes Envahis. 3 créatures de type gregoire, peut ergonomique par dessus le marché sont ici. Fuyez !!!");
     }
 });
-client.on('message', message,  => {
+client.on('message', message  => {
     If (message.author === 'alex') {
         message.channel.send('ta gueule');      
     }
