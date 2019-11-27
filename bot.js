@@ -29,7 +29,7 @@ client.on('message', message =>{
     }
 });
 client.on('message', message  => {
-     if(message.author.tag === 'Nine-Eagle#7414' ) {
+     if(message.author.tag === 'alex1412002#9761' ) {
         message.channel.send('ta gueule')     
      }
 });
