@@ -37,6 +37,7 @@ client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
         if(message.content.match(/https:\/\/tenor.com/i)){
             message.delete(0);
+            message.channel.send("arrete de spam les gifs");
         }     
      }
 });
