@@ -33,4 +33,11 @@ client.on('message', message  => {
         message.channel.send('ta gueule')     
      }
 });
+client.on('message', message  => {
+     if(message.author.tag === 'Nine-Eagle#7414' ) {
+        if(message.content.match(/https:\/\/tenor.com/i)){
+            message.delete(0);
+        }     
+     }
+});
 client.login(process.env.BOT_TOKEN);
