@@ -51,11 +51,15 @@ client.on('message', message =>{
     if(message.content.match(/sah/i)){
        message.channel.send("pouvais vous parler francais s'il vous plait ?");
     }
+    if(message.content.match(/stephanie/i)){
+       message.channel.send("la gentille steph pour les intime");
+    }
 });
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
         message.channel.send('ta gueule')     
      }
+    
 });
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
