@@ -27,6 +27,30 @@ client.on('message', message =>{
     if(message.content === '.gregoire') {
         message.channel.send("Au secours ! Nous sommes Envahis. 3 créatures de type gregoire, peut ergonomique par dessus le marché sont ici. Fuyez !!!");
     }
+    if(message.content.match(/putin/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/merde/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/chier/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/nique/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/enfoiré/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/couilles/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/bite/i)){
+       message.channel.send("vocabulaire !!!");
+    }
+    if(message.content.match(/sah/i)){
+       message.channel.send("pouvais vous parler francais s'il vous plait ?");
+    }
 });
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
