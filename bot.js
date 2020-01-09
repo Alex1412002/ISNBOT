@@ -61,7 +61,7 @@ client.on('message', message =>{
 });
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
-        message.channel.send('tout ceci pose probleme ! Est ce que ces dernieres paroles ont un sens utile pour la communauté ?')     
+        message.channel.send('toujours delicat et rafinée ces mots que nous propose aurelien')     
      }
     
 });
