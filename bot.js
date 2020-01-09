@@ -57,7 +57,7 @@ client.on('message', message =>{
 });
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
-        message.channel.send('ta gueule')     
+        message.channel.send('il fut un temps ou je l\'ecoutait mais la j\'abondonne')     
      }
     
 });
