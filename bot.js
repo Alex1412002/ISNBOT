@@ -24,6 +24,9 @@ client.on('message', message =>{
     if(message.content.match(/bonjour/i)){
        message.channel.send("hey");
     }
+    if(message.content.match(/bite/i)){
+       message.channel.send("vocabulaire !!!");
+    }
     if(message.content === '.gregoire') {
         message.channel.send("Au secours ! Nous sommes Envahis. 3 créatures de type gregoire, peut ergonomique par dessus le marché sont ici. Fuyez !!!");
     }
@@ -33,7 +36,7 @@ client.on('message', message =>{
     if(message.content.match(/merde/i)){
        message.channel.send("vocabulaire !!!");
     }
-    if(message.content.match(/chier/i)){
+    if(message.content.match(/ chier/i)){
        message.channel.send("vocabulaire !!!");
     }
     if(message.content.match(/nique/i)){
@@ -42,16 +45,17 @@ client.on('message', message =>{
     if(message.content.match(/enfoiré/i)){
        message.channel.send("vocabulaire !!!");
     }
-    if(message.content.match(/couilles/i)){
+    if(message.content.match(/ couilles/i)){
        message.channel.send("vocabulaire !!!");
     }
-    if(message.content.match(/bite/i)){
+    if(message.content.match(/ pute/i)){
        message.channel.send("vocabulaire !!!");
     }
+    
     if(message.content.match(/sah/i)){
        message.channel.send("pouvais vous parler francais s'il vous plait ?");
     }
-    if(message.content.match(/stephanie/i)){
+    if(message.content.match(/ stephanie/i)){
        message.channel.send("la gentille steph pour les intime");
     }
 });
