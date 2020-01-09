@@ -55,7 +55,7 @@ client.on('message', message =>{
     if(message.content.match(/sah/i)){
        message.channel.send("pouvais vous parler francais s'il vous plait ?");
     }
-    if(message.content.match(/ stephanie/i)){
+    if(message.content.match(/stephanie/i)){
        message.channel.send("la gentille steph pour les intime");
     }
 });
