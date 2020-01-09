@@ -39,7 +39,7 @@ client.on('message', message =>{
     if(message.content.match(/ chier/i)){
        message.channel.send("vocabulaire !!!");
     }
-    if(message.content.match(/nique/i)){
+    if(message.content.match(/ nique/i)){
        message.channel.send("vocabulaire !!!");
     }
     if(message.content.match(/enfoiré/i)){
