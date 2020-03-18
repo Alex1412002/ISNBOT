@@ -6,7 +6,6 @@ client.on('ready', () => {
 })
 
 
-
 client.on('message', message =>{
     if(message.content.match(/?/i)){
        var randomnumber = Math.floor(Math.random()*11)
