@@ -8,8 +8,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     if(message.content.match(/a/i)){
-       var randomnumber = Math.floor(Math.random()*11)
-       message.channel.send(randomnumber);
+       var randomnumber = Math.floor(Math.random()*31)
        if(randomnumber === 5 ) {
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
