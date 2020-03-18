@@ -10,6 +10,9 @@ client.on('message', message  =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("Non");
     }
+    if(message.content.match(/donne moi le token du bot/i)){
+       message.channel.send("bien sur XXXXXX XXXXXXX ");
+    }
     if(message.content.match(/assistant !/i)){
        message.channel.send("Oui "+message.author+" ?");
     }
