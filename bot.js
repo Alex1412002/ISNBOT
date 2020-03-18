@@ -38,4 +38,10 @@ client.on('message', message  => {
         }     
      }
 });
+client.on('message', message  => {
+     if(message.author.tag === 'Sayday1#5908' ) {
+            message.channel.send("c'est juste");
+        }     
+     }
+});
 client.login(process.env.BOT_TOKEN);
