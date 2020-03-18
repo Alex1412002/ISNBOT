@@ -7,6 +7,9 @@ client.on('ready', () => {
 
 
 client.on('message', message  =>{
+    if(message.content.match(/?/i)){
+       message.channel.send("Mais quel est le rapport avec la choucroute");
+    }
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("Non");
     }
