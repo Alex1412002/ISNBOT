@@ -9,6 +9,7 @@ client.on('ready', () => {
 client.on('message', message  =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("Non");
+    }
 });
 
 client.on('message', message  =>{
