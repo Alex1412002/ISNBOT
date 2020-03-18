@@ -60,8 +60,8 @@ client.on('message', message =>{
     }
 });
 client.on('message', message  => {
-     if(message.author.tag === 'Nine-Eagle#7414' ) {
-        message.channel.send('toujours delicat et rafinée ces mots que nous propose aurelien')     
+     if(message.author.tag === 'Aurora#9826' ) {
+        message.channel.send('chut, tais toi Maya')     
      }
     
 });
