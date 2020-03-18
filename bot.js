@@ -14,13 +14,16 @@ client.on('message', message =>{
        }
     }
     if(message.content.match(/donne moi les commandes/i)){
-       message.channel.send("Non");
+       message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
     if(message.content.match(/assistant !/i)){
        message.channel.send("Oui "+message.author+" ?");
     }
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
+    }
+    if(message.content.match(/!blague/i)){
+       message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
     }
     if(message.content.match(/efface stp/i)){
        message.delete();
