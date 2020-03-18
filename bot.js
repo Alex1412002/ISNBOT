@@ -5,13 +5,9 @@ client.on('ready', function (){
     client.user.setGame("je test").catch(console.error)
 }
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-        message.channel.send('pong');
-    }
-});
-client.on('message', message =>{
-    if(message.content.match(/ pute/i)){
+
+client.on('message', function(message){
+    if(message.content('pute')){
        message.channel.send("vocabulaire !!!");
     }
 });
