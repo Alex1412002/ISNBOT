@@ -40,7 +40,7 @@ client.on('message', message  => {
 });
 client.on('message', message  => {
      if(message.author.tag === 'Sayday1#5908' ) {
-            message.channel.send("c'est juste");
+            message.channel.send("j'allais le dire c fou non ?");
         }     
      }
 });
