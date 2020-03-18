@@ -24,6 +24,10 @@ client.on('message', message =>{
     
 });
 
+client.on('messageReactionAdd', (reaction, user)  => {
+     reaction.message.react(:ok_hand:);
+    
+});
 
 client.on('message', message  => {
      if(message.author.tag === '' ) {
