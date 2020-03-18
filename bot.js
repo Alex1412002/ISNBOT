@@ -28,9 +28,8 @@ client.on('message', message  =>{
     
 });
 
-client.on('messageReactionAdd', message  =>{
-    message.react('🤔');
-    message.channel.send("oui");
+client.on('messageReactionAdd', reaction  =>{
+    reaction.message.react('🤔');
 });
 
 client.on('message', message  => {
