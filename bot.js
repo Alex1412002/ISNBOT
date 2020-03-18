@@ -20,10 +20,11 @@ client.on('message', message  =>{
        message.delete();
        message.delete();
     }
-    if(message.content.match(/réagis !/i)){
-       message.react('🤔');
-    }
     
+});
+
+client.on('messageReactionAdd', message  =>{
+    message.react('🤔')
 });
 
 client.on('message', message  => {
