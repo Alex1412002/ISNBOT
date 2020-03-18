@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on('ready', function (){
+    client.user.setGame("je test").catch(console.error)
+}
+
 client.on('message', message => {
     if (message.content === 'ping') {
         message.channel.send('pong');
