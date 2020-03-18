@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message  =>{
     if(message.content.match(/assistant !/i)){
-       message.channel.send("A votre service" + message.author.tag);
+       message.channel.send("A votre service " + message.author);
     }
 });
 
