@@ -5,6 +5,11 @@ client.on('ready', () => {
     console.log('pret a casser des culs');
 })
 
+client.on('message', message  =>{
+    if(message.content.match(/assistant !/i)){
+       message.channel.send("A votre service" + message.author.tag);
+    }
+});
 
 client.on('message', message  =>{
     if(message.content.match(/donne moi les commandes/i)){
