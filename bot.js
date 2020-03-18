@@ -7,8 +7,8 @@ client.on('ready', () => {
 
 
 client.on('message', message  =>{
-    if(message.content('pute')){
-       message.channel.send("vocabulaire !!!");
+    if(message.content.match(/pute/i)){
+       message.channel.send("Vocabulaire !!!");
     }
 });
 client.on('message', message  => {
