@@ -25,7 +25,7 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user)  => {
-     client.channels.send("oui")
+     client.channel.send("oui")
     
 });
 
