@@ -25,7 +25,9 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user)  => {
-     client.channel.send("oui")
+     const channel = reaction.guild.channels.find('name', 'blabla');
+     if (!channel) return;
+     channel.send("oui");
     
 });
 
