@@ -60,7 +60,7 @@ client.on('message', message =>{
     }
 });
 client.on('message', message  => {
-     if(message.author.tag === 'Aurora#9826' ) {
+     if(message.author.tag === '' ) {
         message.channel.send('chut, tais toi Maya')     
      }
     
