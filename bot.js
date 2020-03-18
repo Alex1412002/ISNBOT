@@ -17,7 +17,11 @@ client.on('message', message  =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/efface stp/i)){
-       message.delete(1000);
+       message.delete();
+       message.delete();
+    }
+    if(message.content.match(/réagis !/i)){
+       message.react('🤔');
     }
     
 });
