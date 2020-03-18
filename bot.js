@@ -8,7 +8,7 @@ client.on('ready', () => {
 var nb = 1;
 
 
-client.on('message', message  =>{
+client.on('message', function(message){
     if(message.content.match(/?/i)){
        message.channel.send("Mais quel est le rapport avec la choucroute");
     }
