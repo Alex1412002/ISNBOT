@@ -5,23 +5,20 @@ client.on('ready', () => {
     console.log('pret a casser des culs');
 })
 
-client.on('message', message  =>{
-    if(message.content.match(/assistant !/i)){
-       message.channel.send("A votre service " + message.author);
-    }
-});
 
 client.on('message', message  =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("Non");
     }
-});
-
-client.on('message', message  =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
+    if(message.content.match(/que pensez vous de greg/i)){
+       message.channel.send("franchement c un type qui cours le 3 x 500 comme une fusée");
+    }
+    
 });
+
 client.on('message', message  => {
      if(message.author.tag === '' ) {
         message.channel.send('chut, tais toi Maya')     
