@@ -9,6 +9,7 @@ client.on('ready', () => {
 client.on('message', message =>{
     if(message.content.match(/?/i)){
        var randomnumber = Math.floor(Math.random()*11)
+       message.channel.send(randomnumber);
        if(randomnumber === 5 ) {
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
