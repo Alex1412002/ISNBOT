@@ -23,7 +23,14 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/!blague/i)){
-       message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
+        var blague = Math.floor(Math.random()*2)
+        if(blague = 0){
+            message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
+        }
+        if(blague = 1){
+            message.channel.send("c'est l'histoire d' un type qui rentre dans un café et ... plouf");
+        }
+        
     }
     if(message.content.match(/efface stp/i)){
        message.delete();
