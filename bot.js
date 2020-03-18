@@ -25,6 +25,7 @@ client.on('message', message  =>{
 
 client.on('messageReactionAdd', message  =>{
     message.react('🤔');
+    message.channel.send("oui");
 });
 
 client.on('message', message  => {
