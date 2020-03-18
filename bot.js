@@ -24,11 +24,11 @@ client.on('message', message  =>{
 });
 
 client.on('messageReactionAdd', message  =>{
-    message.react('🤔')
+    message.react('🤔');
 });
 
 client.on('message', message  => {
-     if(message.author.tag === 'Haxx#0361' ) {
+     if(message.author.tag === '' ) {
         message.channel.send('tais toi stp !')     
      }
     
