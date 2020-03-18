@@ -5,6 +5,8 @@ client.on('ready', () => {
     console.log('pret a casser des culs');
 })
 
+var nb = 1;
+
 
 client.on('message', message  =>{
     if(message.content.match(/?/i)){
