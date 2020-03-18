@@ -7,6 +7,14 @@ client.on('ready', () => {
 
 
 client.on('message', message  =>{
+    if(message.content.match(/donne moi les commandes/i)){
+       message.author.createDM().then(function(channel){
+                                      return channel.send('oui')
+       }).catch(message.channel.send("Ca marche pas"))
+    }
+});
+
+client.on('message', message  =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
