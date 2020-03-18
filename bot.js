@@ -23,8 +23,8 @@ client.on('message', message  =>{
 });
 
 client.on('message', message  => {
-     if(message.author.tag === '' ) {
-        message.channel.send('chut, tais toi Maya')     
+     if(message.author.tag === 'Haxx#0361' ) {
+        message.channel.send('tais toi stp !')     
      }
     
 });
