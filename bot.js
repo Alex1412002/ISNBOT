@@ -16,6 +16,9 @@ client.on('message', message  =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
+    if(message.content.match(/efface stp/i)){
+       message.delete();
+    }
     
 });
 
