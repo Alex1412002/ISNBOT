@@ -61,8 +61,8 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/!blague/i)){
-        var blague = Math.floor(Math.random()*1)
-        if(blague === 11){
+        var blague = Math.floor(Math.random()*12)
+        if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
         }
         if(blague === 1){
@@ -95,12 +95,12 @@ client.on('message', message =>{
         if(blague === 10){
             message.channel.send("Cheh ... askip je dis toujours les memes blagues ?");
         }
-        if(blague === 0){
+        if(blague === 11){
             message.channel.send("quelle est le point commun entre les profs et les hemorroïdes? (!rep pour la reponse)");
         }
         if(message.author.tag != 'ISN bot#5674' ) {
             if(message.content.match(/!rep/i)){
-                if (memoireblague = 0){  
+                if (memoireblague = 11){  
                     message.channel.send("ils sortent du corp enseignant");
     }
         memoireblague = blague
