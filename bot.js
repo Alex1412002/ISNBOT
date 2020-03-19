@@ -16,6 +16,9 @@ client.on('message', message =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
+    if(message.content.match(/!envahisleluxembourg/i)){
+       message.channel.send("je suis pacifique en revanche je frappe vite");
+    }
     if(message.author.tag != 'ISN bot#5674' ) {    
         if(message.content.match(/dieu/i)){
              if(message.author.tag === 'Sayday1#5908' ) {
