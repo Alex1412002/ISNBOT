@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var memoire = 0
 var compteur = 0
 var auteur = 0
-var memoireblague
+var memoireblague = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
