@@ -11,6 +11,7 @@ client.on('ready', () => {
 client.on('message', message =>{
     if (auteur != 'ISN bot#5674'){
     auteur = message.author.tag
+    message.channel.send(memoire);
     if(memoire === auteur) { 
         compteur +=1;
     }
