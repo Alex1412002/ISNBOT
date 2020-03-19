@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var memoire = 0
 var compteur = 0
 var auteur = 0
+var memoireblague
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -60,8 +61,8 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/!blague/i)){
-        var blague = Math.floor(Math.random()*10)
-        if(blague === 0){
+        var blague = Math.floor(Math.random()*1)
+        if(blague === 11){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
         }
         if(blague === 1){
@@ -91,7 +92,18 @@ client.on('message', message =>{
         if(blague === 9){
             message.channel.send("je ne suis pas moche , je suis une boT");
         }
-        
+        if(blague === 10){
+            message.channel.send("Cheh ... askip je dis toujours les memes blagues ?");
+        }
+        if(blague === 0){
+            message.channel.send("quelle est le point commun entre les profs et les hemorroïdes? (!rep pour la reponse)");
+        }
+        if(message.author.tag != 'ISN bot#5674' ) {
+            if(message.content.match(/!rep/i)){
+                if (memoireblague = 0){  
+                    message.channel.send("ils sortent du corp enseignant");
+    }
+        memoireblague = blague
         
     }
     if(message.content.match(/efface stp/i)){
