@@ -9,6 +9,7 @@ client.on('ready', () => {
 
 
 client.on('message', message =>{
+    
     auteur = message.author.tag
     if(memoire === auteur) { 
         compteur +=1;
@@ -16,7 +17,6 @@ client.on('message', message =>{
     else {
         compteur = 0
     }
-    message.channel.send(compteur);
     if (compteur === 4){
         message.channel.send("tu es une pipelette toi ");
     }
