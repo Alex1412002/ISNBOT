@@ -11,18 +11,17 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
     if (auteur != 'ISN bot#5674'){
-    message.channel.send(memoire);
-    if(memoire === auteur) { 
-        compteur +=1;
-    }
-    else {
-        compteur = 0
-    }
-    message.channel.send(compteur);
-    if (compteur === 4){
-        message.channel.send("tu es une pipelette toi ");
-    }
-    memoire = auteur
+        if(memoire === auteur) { 
+            compteur +=1;
+        }
+        else {
+            compteur = 0
+        }
+        if (compteur === 4){
+            message.channel.send("tu es une pipelette toi ");
+            compteur = 0
+        }
+        memoire = auteur
     }
         
     
