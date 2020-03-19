@@ -31,7 +31,7 @@ client.on('message', message =>{
                     message.channel.send("Il parle de lui a la 3 eme personne ...");
                }
                else {
-                   message.channel.send("Je suis athé et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
+                   message.channel.send("Je suis athée et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
                }
            }  
        }
