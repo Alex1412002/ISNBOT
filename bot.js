@@ -31,8 +31,8 @@ client.on('message', message =>{
            }
            else {
                message.channel.send("Je suis athé et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
-       }
-          
+           }
+       }  
     }
     if(message.content.match(/assistant !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
