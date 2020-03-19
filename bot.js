@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 
 client.on('message', message =>{
-    
+    if (auteur != 'ISN bot#5674'){
     auteur = message.author.tag
     if(memoire === auteur) { 
         compteur +=1;
@@ -20,8 +20,10 @@ client.on('message', message =>{
     if (compteur === 4){
         message.channel.send("tu es une pipelette toi ");
     }
+    memoire = auteur
+    }
         
-    var memoire = auteur
+    
     if(message.content.match(/a/i)){
        var randomnumber = Math.floor(Math.random()*31)
        if(randomnumber === 5 ) {
