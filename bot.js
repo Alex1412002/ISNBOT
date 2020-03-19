@@ -16,7 +16,7 @@ client.on('message', message =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
-    if(message.content.match(/dieu/i)){
+    if(message.content.match(//i)){
        if(message.content.match(/@/i)){
            if(message.author.tag === 'Sayday1#5908' ) {
                 message.channel.send("Dieu se tag lui même, quelle modestie");
