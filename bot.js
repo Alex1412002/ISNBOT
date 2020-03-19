@@ -16,23 +16,25 @@ client.on('message', message =>{
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
-    if(message.content.match(//i)){
-       if(message.content.match(/@/i)){
-           if(message.author.tag === 'Sayday1#5908' ) {
-                message.channel.send("Dieu se tag lui même, quelle modestie");
+    if(message.author.tag != 'ISN bot#5674' ) {    
+        if(message.content.match(//dieu)){
+           if(message.content.match(/@/i)){
+               if(message.author.tag === 'Sayday1#5908' ) {
+                    message.channel.send("Dieu se tag lui même, quelle modestie");
+               }
+               else {
+                   message.channel.send("J'espere que tu ne derange pas le seigneur pour rien");
+               }
            }
            else {
-               message.channel.send("J'espere que tu ne derange pas le seigneur pour rien");
-           }
+               if(message.author.tag === 'Sayday1#5908' ) {
+                    message.channel.send("Il parle de lui a la 3 eme personne ...");
+               }
+               else {
+                   message.channel.send("Je suis athé et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
+               }
+           }  
        }
-       else {
-           if(message.author.tag === 'Sayday1#5908' ) {
-                message.channel.send("Il parle de lui a la 3 eme personne ...");
-           }
-           else {
-               message.channel.send("Je suis athé et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
-           }
-       }  
     }
     if(message.content.match(/assistant !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
