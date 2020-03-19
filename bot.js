@@ -17,7 +17,12 @@ client.on('message', message =>{
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
     if(message.content.match(/assistant !/i)){
-       message.channel.send("Oui "+message.author+" ?");
+       if(message.author.tag === '' ) { 
+          message.channel.send("Votre assistant est là seigneur "+message.author+" ?");
+       }
+       else {
+           message.channel.send("Que puis je faire pour vous ?"+message.author+" ?");
+       }
     }
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
