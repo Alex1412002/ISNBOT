@@ -1,12 +1,26 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+var memoire = 0
+var compteur = 0
+var auteur = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
 
 
 client.on('message', message =>{
+    auteur = message.author.tag
+    if(memoire === auteur) { 
+        compteur +=1;
+    }
+    else {
+        compteur = 0
+    }
+    if (compteur === 4){
+        message.channel.send("tu es une pipelette toi ");
+    }
+        
+    var memoire = auteur
     if(message.content.match(/a/i)){
        var randomnumber = Math.floor(Math.random()*31)
        if(randomnumber === 5 ) {
