@@ -102,6 +102,9 @@ client.on('message', message =>{
             if(message.content.match(/!rep/i)){
                 if (memoireblague = 11){  
                     message.channel.send("ils sortent du corp enseignant");
+                }
+            }
+        }
     }
         memoireblague = blague
         
