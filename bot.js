@@ -17,7 +17,7 @@ client.on('message', message =>{
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
     if(message.content.match(/assistant !/i)){
-       if(message.author.tag === '' ) { 
+       if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("Votre assistant est là seigneur "+message.author+" ?");
        }
        else {
