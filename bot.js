@@ -105,8 +105,9 @@ client.on('message', message =>{
                 }
             }
         }
-    }
         memoireblague = blague
+    }
+        
         
     }
     if(message.content.match(/efface stp/i)){
