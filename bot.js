@@ -17,7 +17,7 @@ client.on('message', message =>{
        message.channel.send("pour une bonne boutade il faut ecrire !blague et regardez ce que je dis apres");
     }
     if(message.author.tag != 'ISN bot#5674' ) {    
-        if(message.content.match(//dieu)){
+        if(message.content.match(/dieu/i)){
            if(message.content.match(/@/i)){
                if(message.author.tag === 'Sayday1#5908' ) {
                     message.channel.send("Dieu se tag lui même, quelle modestie");
