@@ -64,13 +64,6 @@ client.on('message', message =>{
     
 });
 
-client.on('messageReactionAdd', (reaction, user)  => {
-     const channel = reaction.guild.channels.find('name', 'blabla');
-     if (!channel) return;
-     channel.send("oui");
-    
-});
-
 client.on('message', message  => {
      if(message.author.tag === '' ) {
         message.channel.send('tais toi stp !')     
