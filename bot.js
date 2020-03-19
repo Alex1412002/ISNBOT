@@ -23,7 +23,7 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/!blague/i)){
-        var blague = Math.floor(Math.random()*3)
+        var blague = Math.floor(Math.random()*10)
         if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
         }
@@ -51,6 +51,10 @@ client.on('message', message =>{
         if(blague === 8){
             message.channel.send("Quand 2 poissons s'enervent le thon monte");
         }
+        if(blague === 9){
+            message.channel.send("je ne suis pas moche , je suis une boT");
+        }
+        
         
     }
     if(message.content.match(/efface stp/i)){
