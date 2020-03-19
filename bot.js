@@ -17,7 +17,7 @@ client.on('message', message =>{
         else {
             compteur = 0
         }
-        if (compteur === 4){
+        if (compteur >= 4){
             message.channel.send("tu es une pipelette toi ");
             compteur = 0
         }
