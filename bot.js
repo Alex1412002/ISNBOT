@@ -23,12 +23,33 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if(message.content.match(/!blague/i)){
-        var blague = Math.floor(Math.random()*2)
-        if(blague = 0){
+        var blague = Math.floor(Math.random()*3)
+        if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
         }
-        if(blague = 1){
+        if(blague === 1){
             message.channel.send("c'est l'histoire d' un type qui rentre dans un café et ... plouf");
+        }
+        if(blague === 2){
+            message.channel.send("c'était une blague sur les magasins ... mais elle a pas supermarché");
+        }
+        if(blague === 3){
+            message.channel.send("le passé le present et le futur entre dans un bar ... il etait temps");
+        }
+        if(blague === 4){
+            message.channel.send("c'est l'histoire d'un poil qui allait bien mais maintenant il va pubien");
+        }
+        if(blague === 5){
+            message.channel.send("Le Viagra c'est comme l'enfer , satan l'habite");
+        }
+        if(blague === 6){
+            message.channel.send("c'est un schtroumf qui tombe et qui se fait un bleu");
+        }
+        if(blague === 7){
+            message.channel.send("les girafes n'existent pas , c'est un coup monté");
+        }
+        if(blague === 8){
+            message.channel.send("Quand 2 poissons s'enervent le thon monte");
         }
         
     }
