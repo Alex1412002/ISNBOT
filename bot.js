@@ -38,6 +38,9 @@ client.on('message', message =>{
     if(message.content.match(/!envahisleluxembourg/i)){
        message.channel.send("je suis pacifique en revanche je frappe vite");
     }
+    if(message.content.match(/Sayday1#5908/i)){
+       message.channel.send("oui");
+    }
     if(message.author.tag != 'ISN bot#5674' ) {    
         if(message.content.match(/dieu/i)){
              if(message.author.tag === 'Sayday1#5908' ) {
