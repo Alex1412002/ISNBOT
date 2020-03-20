@@ -8,6 +8,19 @@ client.on('ready', () => {
     console.log('pret a casser des culs');
 })
 
+client.on("message", msg => {
+    if(msg.content == "@Dieu") {
+        var hereRole = msg.channel.server.roles.get('name', 'travail');
+
+        // All of these three produce the same output
+        // 1
+        client.sendMessage(msg, hereRole.mention() + " is anyone here?");
+        // 2
+        client.sendMessage(msg, hereRole.toString() + " is anyone here?");
+        // 3
+        client.sendMessage(msg, hereRole + " is anyone here?");
+    }
+});
 
 client.on('message', message =>{
     auteur = message.author.tag
