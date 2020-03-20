@@ -39,7 +39,7 @@ client.on('message', message =>{
        message.channel.send("je suis pacifique en revanche je frappe vite");
     }
     if(message.content.match(/!oui/i)) {
-        message.channel.send("On a besoin d'un" + message.author.tag)
+        message.channel.send("On a besoin d'un " + message.author.tag)
     }
     if(message.author.tag != 'ISN bot#5674' ) {    
         if(message.content.match(/dieu/i)){
