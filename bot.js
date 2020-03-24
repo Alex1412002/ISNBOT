@@ -67,7 +67,7 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if((message.content.match(/<@!647166866329960462> raconte moi une blague/i))||(message.content.match(/<@!647166866329960462> raconte moi une blague/i))){
-        var blague = Math.floor(Math.random()*6)
+        var blague = Math.floor(Math.random()*30)
         switch(blague){
             case 0:
                 message.channel.send("Quel est le point commun entre le Viagra et l'enfer ? \nSatan l'habite");
