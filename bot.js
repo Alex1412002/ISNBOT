@@ -90,8 +90,8 @@ client.on('message', message =>{
             memoireblague = 1;
         }
     }
-    if(message.content.match(/!rep/i) && memoireblague === 1){
-       message.channel.send("je suis pacifique en revanche je frappe vite");
+    if(message.content.match(/!rep/i) && memoireblague === 1 && message.author.tag != 'ISN bot#5674'){
+       message.channel.send("Ils sortent du corps enseignant");
         memoireblague = 0;
     }
     if(message.content.match(/efface stp/i)){
