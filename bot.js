@@ -38,19 +38,9 @@ client.on('message', message =>{
     if(message.content.match(/!envahisleluxembourg/i)){
        message.channel.send("je suis pacifique en revanche je frappe vite");
     }
-    if(message.author.tag != 'ISN bot#5674' ) {    
-        if(message.content.match(/dieu/i)){
-             if(message.author.tag === 'Sayday1#5908' ) {
-                  message.channel.send("Il parle de lui a la 3 eme personne ...");
-             }
-             else {
-                  message.channel.send("Je suis athée et ne reconnait aucune personne comme étant dieu... mais je ne suis pas contre l'idée d'etre venerée");
-             }
-            
-        }
-    }
+
     if(message.content.match(/<@!647166866329960462> !/i)){
-       if(message.author.tag === 'Sayday1#5908' ) { 
+       if(message.author.tag === 'Sayday1#598' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
        else {
