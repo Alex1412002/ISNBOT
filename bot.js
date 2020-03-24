@@ -77,6 +77,10 @@ client.on('message', message =>{
                 break;
             case 2:
                 message.channel.send("Pourquoi les femmes se maquillent et se parfument ? \nParce qu’elles sont moches et qu’elles puent.")
+                break;
+            case 3:
+                message.channel.send("Quel est le meilleur site pour un homme qui cherche un lave-vaisselle ? \nUn site de rencontres")
+                break;
         }
         
     }
