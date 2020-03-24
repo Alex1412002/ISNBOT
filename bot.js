@@ -38,9 +38,6 @@ client.on('message', message =>{
     if(message.content.match(/!envahisleluxembourg/i)){
        message.channel.send("je suis pacifique en revanche je frappe vite");
     }
-    if(message.content.match(/!oui/i)) {
-        message.channel.send("On a besoin d'un " + message.author.tag)
-    }
     if(message.author.tag != 'ISN bot#5674' ) {    
         if(message.content.match(/dieu/i)){
              if(message.author.tag === 'Sayday1#5908' ) {
@@ -103,15 +100,12 @@ client.on('message', message =>{
         }
         if(blague === 11){
             message.channel.send("quelle est le point commun entre les profs et les hemorroïdes? (!rep pour la reponse)");
+            memoireblague = 1;
         }
-        if(message.author.tag != 'ISN bot#5674' ) {
-            if(message.content.match(/!rep/i)){
-                if (memoireblague = 11){  
-                    message.channel.send("ils sortent du corp enseignant");
-                }
-            }
-        }
-        memoireblague = blague
+    }
+    if(message.content.match(/!rep/i) && memoireblague === 1){
+       message.channel.send("je suis pacifique en revanche je frappe vite");
+        memoireblague = 0;
     }
     if(message.content.match(/efface stp/i)){
        message.delete();
