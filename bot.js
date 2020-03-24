@@ -40,7 +40,7 @@ client.on('message', message =>{
     }
 
     if((message.content.match(/<@!647166866329960462> !/i))||(message.content.match(/<@647166866329960462> !/i))){
-       if(message.author.tag === 'Sayday1#598' ) { 
+       if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
        else {
@@ -50,7 +50,7 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
-    if(message.content.match(/<@!647166866329960462> raconte moi une blague/i)){
+    if((message.content.match(/<@!647166866329960462> raconte moi une blague/i))||(message.content.match(/<@!647166866329960462> raconte moi une blague/i))){
         var blague = Math.floor(Math.random()*12)
         if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
