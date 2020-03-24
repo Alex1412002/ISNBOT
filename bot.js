@@ -81,6 +81,87 @@ client.on('message', message =>{
             case 3:
                 message.channel.send("Quel est le meilleur site pour un homme qui cherche un lave-vaisselle ? \nUn site de rencontres")
                 break;
+            case 4:
+                message.channel.send("Pourquoi les Ch'tis aiment les fins de vacances au camping ?\nC’est le moment où ils peuvent démonter leur tente.")
+                break;
+            case 5:
+                message.channel.send("Quelle différence y a t il entre une prostituée et une panthère ?\nVous avez déjà vu une panthère avec un string en peau de prostituée ?")
+                break;
+            case 6:
+                message.channel.send("Quel est le point commun entre un homme qui vient de se réveiller et un élastique ?\nLes deux s’étirent, s’étirent, s’étirent, et pètent.")
+                break;
+            case 7:
+                message.channel.send("Mais pourquoi t'es si gros ?\nParce qu’à chaque fois que je baise ta mère elle me donne des gâteaux.")
+                break;
+            case 8:
+                message.channel.send("Quelle est la différence entre les bières et les chasseurs ?\nLes bières, on arrive à en faire des sans alcool.")
+                break;
+            case 9:
+                message.channel.send("Pour un chasseur, qu'elle est la différence entre son chien et sa femme ?\nLe prix du collier.")
+                break;
+            case 10:
+                message.channel.send("Qu'est-ce qu'une blonde avec de l'eau dans la bouche ?\nUne cruche")
+                break;
+            case 11:
+                message.channel.send("Quelle est la partie de la voiture la plus dangereuse ?\nLa conductrice")
+                break;
+            case 12:
+                message.channel.send("Quelle est la différence entre avant et après faire l'amour ?\nAvant, on a le sang qui bout et après on a le bout qui sent.")
+                break;
+            case 13:
+                message.channel.send("Quelle est la différence entre un chalet en Suisse et mon cul ?\nLa vue.")
+                break;
+            case 14:
+                message.channel.send("Qu'est-ce que les hommes apprécient plus que le sexe ?\nQue leurs amis les croient quand ils en parlent.")
+                break;
+            case 15:
+                message.channel.send("Que demande un Chinois dans un café à Marseille ?\nUn jaune.")
+                break;
+            case 16:
+                message.channel.send("Pourquoi les chasseurs tirent-ils sur les panneaux routiers ?\nPour que les aveugles puissent les lire.")
+                break;
+            case 17:
+                message.channel.send("Quel est le point commun entre la poitrine d'une femme et un train électrique ?\nC’est fait pour les enfants mais c’est papa qui joue avec.")
+                break;
+            case 18:
+                message.channel.send("Un couple de randonneurs sont à la campagne :\nLa femme : « Chéri, ce paysage me laisse sans voix ! »\nL’homme : « Parfait, campons ici ! »")
+                break;
+            case 19:
+                message.channel.send("Savez-vous pourquoi il n’y a pas de femmes au paradis ?\nParce que ça serait l’enfer !")
+                break;
+            case 20:
+                message.channel.send("Comment on différencie un homme et une femme nus ?\nL’homme c’est celui qui a gardé ses chaussettes.")
+                break;
+            case 21:
+                message.channel.send("Comment reconnait-on une moto anglaise ?\nLe guidon est à droite")
+                break;
+            case 22:
+                message.channel.send("Pourquoi les hommes s'assoient toujours avec les jambes écartées ?\nPour que leur cerveau respire.")
+                break;
+            case 23:
+                message.channel.send("Quelle est l'année préférée des beaufs ?\n1664")
+                break;
+            case 24:
+                message.channel.send("Que dit une bière quand elle tombe dans l'eau ?\nJe sais panaché")
+                break;
+            case 25:
+                message.channel.send("Quelle est la différence entre la bière et la pisse ?\nEnviron un quart d’heure.")
+                break;
+            case 26:
+                message.channel.send("Quelle est la différence entre une bière et un livreur ?\nLa Kronenbourg est à la poste et Chronopost à la bourre")
+                break;
+            case 27:
+                message.channel.send("Quelle est la différence entre un Ricard et un 69 ?\nLe Ricard, c’est le nez dans l’anis, le 69, c’est le nez dans l’anus.")
+                break;
+            case 28:
+                message.channel.send("Quel est le point commun entre un motard célibataire et sa moto ?\nIls dorment tous les deux sur la béquille.")
+                break;
+            case 29:
+                message.channel.send("Quelle est la différence entre un zèbre et un barman ?\nLe zèbre à des barres autour de son trou du cul. Le barman à des trous du cul autour de son bar.")
+                break;
+            case 30:
+                message.channel.send(" A quoi reconnaît-on le slip de Dark Vador ?\nA son côté obscur !")
+                break;
             default:
                 message.channel.send("Y a pas de blague la")
                 break;
