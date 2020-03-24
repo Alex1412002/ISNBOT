@@ -67,44 +67,18 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if((message.content.match(/<@!647166866329960462> raconte moi une blague/i))||(message.content.match(/<@!647166866329960462> raconte moi une blague/i))){
-        var blague =11
-        if(blague === 0){
-            message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
+        var blague = Math.floor(Math.random()*3)
+        switch(blague){
+            case 0:
+                message.channel.send("Quel est le point commun entre le Viagra et l'enfer ? Satan l'habite");
+                break;
+            case 1:
+                message.channel.send("Quel est le point commun entre un gynécologue myope et un chien en bonne santé ? Ils ont tous les deux le nez mouillé.")
+                break;
+            case 2:
+                message.channel.send("Pourquoi les femmes se maquillent et se parfument ? \nParce qu’elles sont moches et qu’elles puent.")
         }
-        if(blague === 1){
-            message.channel.send("c'est l'histoire d' un type qui rentre dans un café et ... plouf");
-        }
-        if(blague === 2){
-            message.channel.send("c'était une blague sur les magasins ... mais elle a pas supermarché");
-        }
-        if(blague === 3){
-            message.channel.send("le passé le present et le futur entre dans un bar ... il etait temps");
-        }
-        if(blague === 4){
-            message.channel.send("c'est l'histoire d'un poil qui allait bien mais maintenant il va pubien");
-        }
-        if(blague === 5){
-            message.channel.send("Le Viagra c'est comme l'enfer , satan l'habite");
-        }
-        if(blague === 6){
-            message.channel.send("c'est un schtroumf qui tombe et qui se fait un bleu");
-        }
-        if(blague === 7){
-            message.channel.send("les girafes n'existent pas , c'est un coup monté");
-        }
-        if(blague === 8){
-            message.channel.send("Quand 2 poissons s'enervent le thon monte");
-        }
-        if(blague === 9){
-            message.channel.send("je ne suis pas moche , je suis une boT");
-        }
-        if(blague === 10){
-            message.channel.send("Cheh ... askip je dis toujours les memes blagues ?");
-        }
-        if(blague === 11){
-            message.channel.send("quelle est le point commun entre les profs et les hemorroïdes? (!rep pour la reponse)");
-            memoireblague = 1;
-        }
+        
     }
     if(message.content.match(/!rep/i) && memoireblague === 1 && message.author.tag != 'ISN bot#5674'){
        message.channel.send("Ils sortent du corps enseignant");
