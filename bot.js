@@ -119,7 +119,7 @@ client.on('message', message =>{
 
 client.on('message', message  => {
      if(message.author.tag === 'Elorcas#0994' ) {
-        message.channel.send('Chut !')     
+        message.channel.send('Mais tais toi !')     
      }
     
 });
