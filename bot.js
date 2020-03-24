@@ -54,10 +54,10 @@ client.on('message', message =>{
     }
     if(message.content.match(/assistant !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
-          message.channel.send("Votre assistant est là seigneur "+message.author+" ?");
+          message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
        else {
-           message.channel.send("Que puis je faire pour vous ?"+message.author+" ?");
+           message.channel.send("Je ne suis pas sûr que tu mérites de m'appeler :thinking:");
        }
     }
     if(message.content.match(/pute/i)){
