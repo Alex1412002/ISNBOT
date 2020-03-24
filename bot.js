@@ -51,7 +51,7 @@ client.on('message', message =>{
        message.channel.send("Vocabulaire !!!");
     }
     if((message.content.match(/<@!647166866329960462> raconte moi une blague/i))||(message.content.match(/<@!647166866329960462> raconte moi une blague/i))){
-        var blague = Math.floor(Math.random()*12)
+        var blague =11
         if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
         }
