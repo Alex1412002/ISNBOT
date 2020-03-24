@@ -49,7 +49,7 @@ client.on('message', message =>{
             
         }
     }
-    if(message.content.match(/assistant !/i)){
+    if(message.content.match(/<@!647166866329960462> !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
