@@ -39,7 +39,7 @@ client.on('message', message =>{
        message.channel.send("je suis pacifique en revanche je frappe vite");
     }
 
-    if(message.content.match(/<@!647166866329960462> !/i)){
+    if((message.content.match(/<@!647166866329960462> !/i))||(message.content.match(/<@647166866329960462> !/i))){
        if(message.author.tag === 'Sayday1#598' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
