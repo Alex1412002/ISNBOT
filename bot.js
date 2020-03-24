@@ -118,8 +118,8 @@ client.on('message', message =>{
 });
 
 client.on('message', message  => {
-     if(message.author.tag === '' ) {
-        message.channel.send('tais toi stp !')     
+     if(message.author.tag === 'Elorcas#0994' ) {
+        message.channel.send('Chut !')     
      }
     
 });
