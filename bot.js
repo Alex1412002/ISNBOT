@@ -50,10 +50,7 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
-    if(message.content.match(/!non/i)){
-       message.channel.send("<@&689041074538283008>");
-    }
-    if(message.content.match(/!blague/i)){
+    if(message.content.match(/<@!647166866329960462> raconte moi une blague/i)){
         var blague = Math.floor(Math.random()*12)
         if(blague === 0){
             message.channel.send("c'est l'histoire de toto au toilette mais personne ne la connait car il avait fermé la porte");
