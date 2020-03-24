@@ -63,6 +63,9 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
+    if(message.content.match(/!non/i)){
+       message.channel.send("<@&689041074538283008>");
+    }
     if(message.content.match(/!blague/i)){
         var blague = Math.floor(Math.random()*12)
         if(blague === 0){
