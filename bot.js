@@ -70,10 +70,10 @@ client.on('message', message =>{
         var blague = Math.floor(Math.random()*6)
         switch(blague){
             case 0:
-                message.channel.send("Quel est le point commun entre le Viagra et l'enfer ? Satan l'habite");
+                message.channel.send("Quel est le point commun entre le Viagra et l'enfer ? \nSatan l'habite");
                 break;
             case 1:
-                message.channel.send("Quel est le point commun entre un gynécologue myope et un chien en bonne santé ? Ils ont tous les deux le nez mouillé.")
+                message.channel.send("Quel est le point commun entre un gynécologue myope et un chien en bonne santé ? \nIls ont tous les deux le nez mouillé.")
                 break;
             case 2:
                 message.channel.send("Pourquoi les femmes se maquillent et se parfument ? \nParce qu’elles sont moches et qu’elles puent.")
