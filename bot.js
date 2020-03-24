@@ -57,7 +57,7 @@ client.on('message', message =>{
         }
     }
 
-    if((message.content.match(/<@!647166866329960462> !/i))||(message.content.match(/<@647166866329960462> !/i))){
+    if(message.content.match(/<@!647166866329960462> !/i) || message.content.match(/<@647166866329960462> !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
@@ -68,7 +68,7 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
-    if((message.content.match(/<@!647166866329960462> raconte moi une blague/i))||(message.content.match(/<@!647166866329960462> raconte moi une blague/i))){
+    if(message.content.match(/<@!647166866329960462> raconte moi une blague/i) || message.content.match(/<@!647166866329960462> raconte moi une blague/i)){
         var blague = Math.floor(Math.random()*30)
         switch(blague){
             case 0:
