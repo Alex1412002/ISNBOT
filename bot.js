@@ -188,7 +188,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
     reaction.message.react('🤔');
     reaction.message.channel.send('il y a bien une réaction ici');
     reaction.message.channel.send('message : ' +reaction.message.author.tag);
-    reaction.message.channel.send('utilisateur : ' + user.tag);
+    reaction.message.channel.send('utilisateur : ' + user.username);
     reaction.message.channel.send(reaction.emoji.name);
 });
 
