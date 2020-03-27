@@ -48,9 +48,6 @@ client.on('message', message =>{
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
     }
-    if(message.content.match(/coeur/i)){
-       message.react('❤️');
-    }
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send(":small_blue_diamond: pour une bonne boutade il faut ecrire *raconte moi une blague* \n:small_blue_diamond: pour avoir mon avis sur l'invasion du luxembourg : *!envahisleluxembourg* \n:small_blue_diamond: Et puis jsuis pas a tes ordres donc je l'ouvre quand je veux");
     }
@@ -189,10 +186,10 @@ client.on('messageReactionAdd', (reaction, user) =>{
     if(user.tag != 'ISN bot#5674' && randomnumber === 1){
         reaction.message.channel.send(`${user} d'où tu réagis avec un ` + reaction.emoji.name);
     }
-    if(reaction.emoji.name === '🤔'){
-        reaction.message.channel.send("j'aime les coeurs");
+    if(reaction.emoji.name === '❤️'){
+        reaction.message.channel.send("j'aime les coeurs 😊");
     }
-    reaction.message.react('❤️');
+    reaction.message.react('🙃');
 });
 
 client.on('message', message  => {
