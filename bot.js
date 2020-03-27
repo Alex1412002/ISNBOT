@@ -192,7 +192,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
     if(reaction.emoji.name === '🤔'){
         reaction.message.channel.send("j'aime les coeurs");
     }
-    reaction.message.react('😛');
+    reaction.message.react('❤️');
 });
 
 client.on('message', message  => {
