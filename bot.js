@@ -5,6 +5,7 @@ var compteur = 0
 var auteur = 0
 var memoireblague = 0
 var variable_test = 0
+var reactions = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -47,6 +48,9 @@ client.on('message', message =>{
        if(randomnumber === 5 ) {
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
+    }
+    if(message.content.match(/combien de reactions ?/i)){
+       message.react(reactions)
     }
     if(message.content.match(/coeur/i)){
        message.react('🤔')
@@ -185,6 +189,7 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
+    reactions = reactions + 1
 }
 
 client.on('message', message  => {
