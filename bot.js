@@ -13,20 +13,6 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
     
-    if(message.content.match(/un test/i)){
-        variable_test = Math.floor(Math.random()*3)
-        switch(variable_test){
-            case 0:
-                message.channel.send("j'ai 0 ici");
-                break;
-            case 1:
-                message.channel.send("la plutot 1");
-                break;
-            case 2:
-                message.channel.send("et ici 2");
-                break;
-        }
-    }
     if (auteur != 'ISN bot#5674'){
         if(memoire === auteur) { 
             compteur +=1;
@@ -193,6 +179,10 @@ client.on('messageReactionAdd', (reaction, user) =>{
     if(reaction.emoji.name != '❤️'){
         reaction.message.react('🙃');
     }
+});
+
+client.on('emojiCreate', newEmoji =>{
+    client.channels.get("689039870915903554").send("UN NOUVEL EMOJI : " + newEmoji.name)
 });
 
 client.on('message', message  => {
