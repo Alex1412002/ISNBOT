@@ -184,9 +184,6 @@ client.on('message', message =>{
     
 });
 
-client.on('messageReactionAdd', (reaction, user) =>{
-    reaction.message.channel.send('oui');
-}
 
 client.on('message', message  => {
      if(message.author.tag === '' ) {
