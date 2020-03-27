@@ -186,7 +186,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
     if(user.tag != 'ISN bot#5674' && randomnumber === 1 && reaction.emoji.name != '❤️'){
         reaction.message.channel.send(`${user} d'où tu réagis avec un ` + reaction.emoji.name);
     }
-    if(reaction.emoji.name === '❤️'){
+    if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '❤️'){
         reaction.message.channel.send("j'aime les coeurs 😊");
         reaction.message.react('❤️');
     }
