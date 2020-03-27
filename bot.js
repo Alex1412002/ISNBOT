@@ -49,7 +49,7 @@ client.on('message', message =>{
        }
     }
     if(message.content.match(/coeur/i)){
-       message.react('🤔');
+       message.react('❤️');
     }
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send(":small_blue_diamond: pour une bonne boutade il faut ecrire *raconte moi une blague* \n:small_blue_diamond: pour avoir mon avis sur l'invasion du luxembourg : *!envahisleluxembourg* \n:small_blue_diamond: Et puis jsuis pas a tes ordres donc je l'ouvre quand je veux");
