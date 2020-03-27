@@ -48,6 +48,9 @@ client.on('message', message =>{
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
     }
+    if(message.content.match(/coeur/i)){
+       message.react(':heart:')
+    }
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send(":small_blue_diamond: pour une bonne boutade il faut ecrire *raconte moi une blague* \n:small_blue_diamond: pour avoir mon avis sur l'invasion du luxembourg : *!envahisleluxembourg* \n:small_blue_diamond: Et puis jsuis pas a tes ordres donc je l'ouvre quand je veux");
     }
