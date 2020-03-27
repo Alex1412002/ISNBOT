@@ -187,7 +187,6 @@ client.on('message', message =>{
 client.on('messageReactionAdd', (reaction, user) =>{
     reaction.message.react('🤔');
     reaction.message.channel.send('utilisateur : ' + '${user}');
-    reaction.message.channel.send(${user});
     reaction.message.channel.send(reaction.emoji.name);
 });
 
