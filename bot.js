@@ -189,8 +189,8 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    reactions = reactions + 1
-}
+    reactions = reactions + 1;
+});
 
 client.on('message', message  => {
      if(message.author.tag === '' ) {
