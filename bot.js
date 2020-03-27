@@ -28,7 +28,7 @@ client.on('message', message =>{
     }
         
     if(message.content.match(/!emoji/i)){
-       message.channel.send("non");
+       message.channel.send(client.emojis.get("693209803123589160").toString());
        message.channel.send("sinon on a :heart: ou :quasper:");
     }
     if(message.content.match(/a/i)){
