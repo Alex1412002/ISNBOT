@@ -182,6 +182,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
     if(reaction.emoji.name != '❤️'){
         reaction.message.react('🙃');
     }
+    reaction.message.channel.send(reaction.emoji.id);
 });
 
 client.on('emojiCreate', newEmoji =>{
