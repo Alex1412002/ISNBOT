@@ -27,8 +27,9 @@ client.on('message', message =>{
         memoire = auteur
     }
         
-    if(message.content.match(/fais l'emoji stp/i)){
-       message.channel.send("vous avez demandé un : " + client.guild.emojis.get("693209803123589160")).toString();
+    if(message.content.match(/!emoji/i)){
+       message.channel.send("vous avez demandé un : " + client.guild.emojis.get("693209803123589160").toString());
+       message.channel.send("sinon on a :heart: ou :quasper:");
     }
     if(message.content.match(/a/i)){
        var randomnumber = Math.floor(Math.random()*101)
