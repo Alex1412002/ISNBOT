@@ -185,8 +185,9 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    if(user.tag != 'ISN bot#5674'){
-        reaction.message.channel.send(`${user} d'où tu réagis avec` + reaction.emoji.name);
+    var randomnumber = Math.floor(Math.random()*6)
+    if(user.tag != 'ISN bot#5674' && randomnumber === 1){
+        reaction.message.channel.send(`${user} d'où tu réagis avec un ` + reaction.emoji.name);
     }
     reaction.message.react('🤔');
 });
