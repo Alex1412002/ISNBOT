@@ -171,9 +171,9 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    var randomnumber = Math.floor(Math.random()*6)
+    var randomnumber = Math.floor(Math.random()*4)
     if(user.tag != 'ISN bot#5674' && randomnumber === 1 && reaction.emoji.name != '❤️'){
-        reaction.message.channel.send(`${user} d'où tu réagis avec un ` + reaction.emoji.name);
+        reaction.message.channel.send(`${user} d'où tu réagis avec un ` + client.emojis.get(reaction.id).toString());
     }
     if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '❤️'){
         reaction.message.channel.send("j'aime les coeurs 😊");
