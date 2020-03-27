@@ -190,6 +190,7 @@ client.on('message', message =>{
 
 client.on('messageReactionAdd', (reaction, user) =>{
     reactions = reactions + 1;
+    reaction.message.channel.send("ouiiiii");
 });
 
 client.on('message', message  => {
