@@ -28,7 +28,7 @@ client.on('message', message =>{
     }
         
     if(message.content.match(/fais l'emoji stp/i)){
-       message.channel.send(client.emojis.get("693209803123589160")).toString();
+       message.channel.send("vous avez demandé un : " + client.guild.emojis.get("693209803123589160")).toString();
     }
     if(message.content.match(/a/i)){
        var randomnumber = Math.floor(Math.random()*101)
