@@ -196,6 +196,14 @@ client.on('messageReactionAdd', (reaction, user) =>{
 });
 
 client.on('message', message  => {
+     if(message.author.tag === 'Aurora#9826' ) {
+        if(message.content.match(/bot/i) || message.content.match(/assistant/i)){
+            message.channel.send("tu oses parler de moi, petite plebeienne ?");
+        }     
+     }
+});
+
+client.on('message', message  => {
      if(message.author.tag === '' ) {
         message.channel.send('Mais tais toi !');     
      }
