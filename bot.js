@@ -184,6 +184,10 @@ client.on('message', message =>{
     
 });
 
+client.on('messageReactionAdd', (reaction, user) =>{
+    reaction.message.channel.send(`The emoji used was: ${reaction.emoji}`);
+}
+
 client.on('message', message  => {
      if(message.author.tag === '' ) {
         message.channel.send('Mais tais toi !')     
