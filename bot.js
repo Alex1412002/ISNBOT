@@ -188,6 +188,12 @@ client.on('emojiCreate', newEmoji =>{
     client.channels.get("689039870915903554").send(`UN NOUVEL EMOJI : ` + client.emojis.get(newEmoji.id.toString()).toString());
 });
 
+client.on('typingStart', (channel, user) =>{
+    if(channel.id === "689039870428971043"){
+        channel.send("Il va m'écrire quoi lui");
+    }
+});
+
 client.on('message', message  => {
      if(message.author.tag === 'Aurora#9826' ) {
         if(message.content.match(/bot/i) || message.content.match(/assistant/i)){
