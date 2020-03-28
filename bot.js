@@ -50,7 +50,10 @@ client.on('message', message =>{
        if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
        }
-       else {
+       if(message.author.tag === 'Alex1412002#9761' ) {
+          message.channel.send("Que veut mon petit assistant ?");
+       }
+       if(auteur != 'Alex1412002#9761' && auteur != 'Sayday1#5908'){
            message.channel.send("Je ne suis pas sûr que tu mérites de m'appeler :thinking:");
        }
     }
