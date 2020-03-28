@@ -189,7 +189,7 @@ client.on('emojiCreate', newEmoji =>{
 });
 
 client.on('typingStart', (channel, user) =>{
-    if(channel.id === "689039870428971043"){
+    if(channel.id === "689788626418401308"){
         channel.send("Il va m'écrire quoi lui");
     }
 });
