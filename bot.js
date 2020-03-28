@@ -208,6 +208,11 @@ client.on('message', message  => {
      }
     
 });
+
+client.on('voiceStateUpdate', (ancien, nouveau)  => {
+    client.channels.get("689788626418401308").send(":heart:");
+});
+
 client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
         if(message.content.match(/https:\/\/tenor.com/i)){
