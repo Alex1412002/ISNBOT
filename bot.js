@@ -167,9 +167,9 @@ client.on('message', message =>{
        message.channel.send("Ils sortent du corps enseignant");
         memoireblague = 0;
     }
-    if(message.content.match(/efface stp/i)){
-       message.delete();
-       message.delete();
+    if(message.content.match(/https:\/\/tenor.com/i)){
+         message.delete();
+         message.channel.send("message supprimé");
     }
 });
 
@@ -214,12 +214,6 @@ client.on('message', message  => {
 });
 
 client.on('voiceStateUpdate', (ancien, nouveau)  => {
-});
-
-client.on('message', message  => {
-     if(message.content.match(/https:\/\/tenor.com/i)){
-         message.delete();
-         message.channel.send("message supprimé");
 });
 
 client.on('message', message  => {
