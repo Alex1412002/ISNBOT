@@ -167,7 +167,7 @@ client.on('message', message =>{
        message.channel.send("Ils sortent du corps enseignant");
         memoireblague = 0;
     }
-    if(message.content.match(/https:\/\/tenor.com/i)){
+    if(message.content.match(/https:\/\/tenor.com/i) && message.author.tag === "Sishoas#5408"){
          message.delete();
          message.channel.send("message supprimé");
     }
