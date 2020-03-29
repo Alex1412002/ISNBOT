@@ -178,6 +178,7 @@ client.on('message', message =>{
         message.react('🌑');
         message.react('🌕');
         message.channel.send("Vote créé, allez-y");
+        dernierMess = dernierMess + 1;
     }
 });
 
@@ -191,7 +192,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
         reaction.message.react('❤️');
         dernierMess = dernierMess + 1;
     }
-    if(reaction.emoji.name != '❤️' && dernierMess != 0){
+    if(reaction.emoji.name != '❤️' && dernierMess === 0){
         reaction.message.react('🌍');
     }
 });
