@@ -199,8 +199,9 @@ client.on('emojiCreate', lemoji =>{
 });
 
 client.on('typingStart', (channel, user) =>{
-    if(channel.id === "689788626418401308"){
+    if(channel.id === "689788626418401308" && dernierMess === 0){
         channel.send("Il va m'écrire quoi lui");
+        dernierMess = dernierMess + 1;
     }
 });
 
