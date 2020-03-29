@@ -215,9 +215,15 @@ client.on('voiceStateUpdate', (ancien, nouveau)  => {
 });
 
 client.on('message', message  => {
+     if(message.content.match(/https:\/\/tenor.com/i)){
+         message.delete();
+         message.channel.send("message supprimé");
+});
+
+client.on('message', message  => {
      if(message.author.tag === 'Nine-Eagle#7414' ) {
         if(message.content.match(/https:\/\/tenor.com/i)){
-            message.channel.send("arrete de spam les gifs");
+            message.delete();
         }     
      }
 });
