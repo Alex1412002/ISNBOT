@@ -186,8 +186,9 @@ client.on('messageReactionAdd', (reaction, user) =>{
     }
 });
 
-client.on('emojiCreate', newEmoji =>{
-    client.channels.get("689039870915903554").send(`UN NOUVEL EMOJI : ` + client.emojis.get(newEmoji.id.toString()).toString());
+client.on('emojiCreate', lemoji =>{
+    client.channels.get("689039870915903554").send("UN NOUVEL EMOJI : " + client.emojis.get(lemoji.id.toString()).toString());
+    client.channels.get("689039870915903554").send(client.emojis.get(lemoji.id.toString()).toString());
 });
 
 client.on('typingStart', (channel, user) =>{
