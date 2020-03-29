@@ -12,6 +12,9 @@ client.on('ready', () => {
 
 
 client.on('message', message =>{
+    if(message.content.match(//i)){
+        dernierMess = 0;
+    }
     auteur = message.author.tag
     
     if (auteur != 'ISN bot#5674'){
