@@ -12,10 +12,11 @@ client.on('ready', () => {
 
 
 client.on('message', message =>{
-    if(message.content.match(/ /i)){
+    auteur = message.author.tag
+    
+    if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
-    auteur = message.author.tag
     
     if (auteur != 'ISN bot#5674'){
         if(memoire === auteur) { 
