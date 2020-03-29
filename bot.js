@@ -65,7 +65,7 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
-    if(message.content.match(/<@!647166866329960462> raconte moi une blague/i) || message.content.match(/<@!647166866329960462> raconte moi une blague/i)){
+    if(message.content.match(/647166866329960462> raconte moi une blague/i)){
         var blague = Math.floor(Math.random()*30)
         switch(blague){
             case 0:
@@ -197,7 +197,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
 });
 
 client.on('emojiCreate', lemoji =>{
-    client.channels.get("689039870915903554").send("Y a un noouvel emoji les enfants");
+    client.channels.get("689039870915903554").send("Y a un nouvel emoji les enfants");
 });
 
 client.on('typingStart', (channel, user) =>{
