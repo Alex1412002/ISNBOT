@@ -25,7 +25,7 @@ client.on('message', message =>{
         else {
             compteur = 0
         }
-        if (compteur >= 4){
+        if (compteur >= 5){
             message.channel.send("tu es une pipelette toi ");
             compteur = 0
         }
@@ -175,7 +175,9 @@ client.on('message', message =>{
          message.delete();
     }
     if(message.content.match(/647166866329960462> on fait un vote/i)){
-         message.channel.send("Vote créé, allez-y");
+        message.react('🌑');
+        message.react('🌕');
+        message.channel.send("Vote créé, allez-y");
     }
 });
 
