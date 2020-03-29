@@ -173,6 +173,9 @@ client.on('message', message =>{
     if(message.content.match(/https:\/\/tenor.com/i) && message.author.tag === "Sishoas#5408"){
          message.delete();
     }
+    if(message.content.match(/647166866329960462> on fait un vote/i)){
+         message.channel.send("Vote créé, allez-y");
+    }
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
