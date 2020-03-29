@@ -191,7 +191,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
         reaction.message.react('❤️');
         dernierMess = dernierMess + 1;
     }
-    if(reaction.emoji.name != '❤️' && reaction.message != "on fait un vote"){
+    if(reaction.emoji.name != '❤️' && dernierMess != 0){
         reaction.message.react('🌍');
     }
 });
