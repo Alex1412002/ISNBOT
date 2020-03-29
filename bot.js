@@ -212,7 +212,6 @@ client.on('message', message  => {
 });
 
 client.on('voiceStateUpdate', (ancien, nouveau)  => {
-    client.channels.get("689788626418401308").send(":heart:");
 });
 
 client.on('message', message  => {
