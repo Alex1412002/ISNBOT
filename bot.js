@@ -6,6 +6,7 @@ var auteur = 0
 var memoireblague = 0
 var variable_test = 0
 var dernierMess = 0
+var auteurmute = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -42,12 +43,18 @@ client.on('message', message =>{
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
     }
+    if(auteurmute!= 0){  
+       if(message.author.tag = auteurmute){
+           message.delete();
+           message.channel.send("je recommence ?");
+           auteurmute = 0
+    }   
     if(message.content.match(/bot/i)){
         if(auteur != 'Alex1412002#9761' && auteur != 'Sayday1#5908'){
             message.channel.send("bon le prochain qui parle de moi je lui casse la gueule");
+            auteurmute = message.author.tag
         }
-    }
-        
+    }    
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send(":small_blue_diamond: pour une bonne boutade il faut ecrire *raconte moi une blague* \n:small_blue_diamond: pour avoir mon avis sur l'invasion du luxembourg : *!envahisleluxembourg* \n:small_blue_diamond: Et puis jsuis pas a tes ordres donc je l'ouvre quand je veux");
     }
@@ -60,6 +67,7 @@ client.on('message', message =>{
     if(message.content.match(/647166866329960462> !/i)){
        if(message.author.tag === 'Sayday1#5908' ) { 
           message.channel.send("De quoi avez vous besoin notre <@&689041074538283008> ?");
+           
        }
        if(message.author.tag === 'Alex1412002#9761' ) {
           message.channel.send("Que veut mon petit assistant ?");
@@ -71,6 +79,7 @@ client.on('message', message =>{
     if(message.content.match(/pute/i)){
        message.channel.send("Vocabulaire !!!");
     }
+    
     if(message.content.match(/647166866329960462> raconte moi une blague/i)){
         var blague = Math.floor(Math.random()*30)
         switch(blague){
