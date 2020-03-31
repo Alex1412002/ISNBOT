@@ -43,18 +43,7 @@ client.on('message', message =>{
             message.channel.send("mais quel est le rapport avec la choucroute ?");
        }
     }
-    if(auteurmute!= 0){  
-       if(message.author.tag = auteurmute){
-           message.delete();
-           message.channel.send("je recommence ?");
-           auteurmute = 0
-    }   
-    if(message.content.match(/bot/i)){
-        if(auteur != 'Alex1412002#9761' && auteur != 'Sayday1#5908'){
-            message.channel.send("bon le prochain qui parle de moi je lui casse la gueule");
-            auteurmute = message.author.tag
-        }
-    }    
+      
     if(message.content.match(/donne moi les commandes/i)){
        message.channel.send(":small_blue_diamond: pour une bonne boutade il faut ecrire *raconte moi une blague* \n:small_blue_diamond: pour avoir mon avis sur l'invasion du luxembourg : *!envahisleluxembourg* \n:small_blue_diamond: Et puis jsuis pas a tes ordres donc je l'ouvre quand je veux");
     }
