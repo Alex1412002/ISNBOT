@@ -7,14 +7,18 @@ var memoireblague = 0
 var variable_test = 0
 var dernierMess = 0
 var auteurmute = 0
+var test = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
+test = test + 1
 
 
 client.on('message', message =>{
     auteur = message.author.tag
-    
+    if(message.content.match(/test/i)){
+       message.channel.send(test);
+    }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
