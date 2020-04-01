@@ -71,15 +71,13 @@ client.on('message', message =>{
     if(auteurmute!= 0){
        if(message.author.tag === auteurmute){
            message.delete();
-           message.channel.send("je recommence ?");
+           message.channel.send("*message supprimé* ");
            auteurmute = 0
        }
     }
     if(message.content.match(/bot/i)){
-        if(auteur != 'Sayday1#5908'){
             message.channel.send("bon le prochain qui parle de moi je lui casse la gueule");
             auteurmute = message.author.tag;
-        }
     }
     if(message.content.match(/647166866329960462> raconte moi une blague/i)){
         var blague = Math.floor(Math.random()*30)
