@@ -11,12 +11,12 @@ var test = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
-test = test + 1
 
 
 client.on('message', message =>{
     auteur = message.author.tag
     if(message.content.match(/test/i)){
+       test = test + 1
        message.channel.send(test);
     }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
