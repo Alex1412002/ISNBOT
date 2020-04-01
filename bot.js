@@ -71,7 +71,7 @@ client.on('message', message =>{
     if(auteurmute!= 0){
        if(message.author.tag === auteurmute){
            message.delete();
-           message.channel.send("*message supprimé* ");
+           message.channel.send("*message supprimé*\nAucun interet de lire cette chose ");
            auteurmute = 0
        }
     }
