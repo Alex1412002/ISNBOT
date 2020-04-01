@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
     if(message.content.match(/test/i)){
-       message.edit("message");
+       message.channel.send("message");
        delai = 1
     }
     if(delai != 0){
