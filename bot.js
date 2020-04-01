@@ -70,7 +70,7 @@ client.on('message', message =>{
     }
     if(auteurmute!= 0){
        if(message.author.tag === auteurmute){
-           message.delete(500);
+           message.delete();
            message.channel.send("je recommence ?");
            auteurmute = 0
        }
