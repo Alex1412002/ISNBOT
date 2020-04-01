@@ -70,13 +70,13 @@ client.on('message', message =>{
     }
     if(auteurmute!= 0){
        if(message.author.tag === auteurmute){
-           message.delete();
+           message.delete(500);
            message.channel.send("je recommence ?");
            auteurmute = 0
        }
     }
     if(message.content.match(/bot/i)){
-        if(auteur !='Alex1412002#9761' && auteur != 'Sayday1#5908'){
+        if(auteur != 'Sayday1#5908'){
             message.channel.send("bon le prochain qui parle de moi je lui casse la gueule");
             auteurmute = message.author.tag;
         }
