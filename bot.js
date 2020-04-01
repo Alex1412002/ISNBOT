@@ -76,7 +76,7 @@ client.on('message', message =>{
        }
     }
     if(message.content.match(/bot/i)){
-        if(auteur != 'Sayday1#5908'){
+        if(auteur !='Alex1412002#9761' && auteur != 'Sayday1#5908'){
             message.channel.send("bon le prochain qui parle de moi je lui casse la gueule");
             auteurmute = message.author.tag;
         }
