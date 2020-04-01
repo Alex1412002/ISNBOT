@@ -9,6 +9,7 @@ var dernierMess = 0
 var auteurmute = 0
 var test = 0
 var delai = 0
+var i = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -18,6 +19,7 @@ client.on('message', message =>{
     auteur = message.author.tag
     if(message.content.match(/test/i)){
        message.channel.send("message");
+       i = 0
        do {
            i += 1;
        } while (i < 20);
