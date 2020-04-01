@@ -22,7 +22,7 @@ client.on('message', message =>{
        i = 0
        do {
            i += 1;
-           message.channel.send(i)
+           message.channel.send(i);
        } while (i < 20);
        message.edit("message modifié")
     }
