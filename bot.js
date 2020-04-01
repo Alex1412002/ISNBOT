@@ -8,6 +8,7 @@ var variable_test = 0
 var dernierMess = 0
 var auteurmute = 0
 var test = 0
+var delai = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -16,8 +17,17 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
     if(message.content.match(/test/i)){
-       test = test + 1
-       message.channel.send(test);
+       message.channel.send("message");
+       delai = 1
+    }
+    if(delai != 0){
+       if(delai >= 10){
+           message.edit("message modifié")
+           delai = 0
+       }
+       else{
+           delai += 1
+       }
     }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
