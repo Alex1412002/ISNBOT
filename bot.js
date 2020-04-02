@@ -19,12 +19,8 @@ client.on('message', message =>{
     auteur = message.author.tag
     if(message.content.match(/test/i)){
        message.channel.send("message");
-       i = 0
-       do {
-           i += 1;
-          
-       } while (i < 20);
-       message.channel.send("ok")
+       setTimeout(message.edit("message modifié"),5000)
+       
     }
         
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
