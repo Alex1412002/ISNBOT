@@ -10,6 +10,7 @@ var auteurmute = 0
 var test = 0
 var delai = 0
 var i = 0
+var lastmessage =  0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
