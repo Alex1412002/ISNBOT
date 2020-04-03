@@ -18,7 +18,7 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
        
-    }
+    
     if(message.content.match(/!clear/i)){
        message.delete();
        message.delete();
