@@ -10,7 +10,7 @@ var auteurmute = 0
 var test = 0
 var delai = 0
 var i = 0
-var historique = new array();
+var historique = new array(50);
 var lastmessage =  0
 var lastlastmessage = 0
 var taille = 0
@@ -28,7 +28,7 @@ client.on('message', message =>{
             taille = historique.lengt
             historique[taille-1].delete();
             historique.reverse();
-            historique.pop()
+            historique.pop();
             historique.reverse();
             message.delete();
         
@@ -216,7 +216,7 @@ client.on('message', message =>{
     historique.push(message);
     historique.reverse();
     if(historique.lengt > 50){
-        historique.pop()
+        historique.pop();
     }
     historique.reverse();
 });
