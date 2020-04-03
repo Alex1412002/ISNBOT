@@ -21,8 +21,10 @@ client.on('message', message =>{
     
     
     if(message.content.match(/!clear/i)){
-       message.delete();
-       lastmessage.delete();
+        if(auteur ===  'Alex1412002#9761'){
+        message.delete();
+        lastmessage.delete();
+        }
     }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
