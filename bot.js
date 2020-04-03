@@ -17,11 +17,11 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     auteur = message.author.tag
-    lastmessage = message  
+    
     
     if(message.content.match(/!clear/i)){
        message.delete();
-       message.delete();
+       lastmessage.delete();
     }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
@@ -202,6 +202,7 @@ client.on('message', message =>{
         message.channel.send("Vote créé, allez-y");
         dernierMess = dernierMess + 1;
     }
+    lastmessage = message  
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
