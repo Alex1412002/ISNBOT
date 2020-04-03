@@ -17,12 +17,12 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     auteur = message.author.tag
-    if(message.content.match(/test/i)){
-       message.channel.send("message");
-       setTimeout(message.edit("message modifié"),5000)
        
     }
-        
+    if(message.content.match(/!clear/i)){
+       message.delete();
+       message.delete();
+    }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
