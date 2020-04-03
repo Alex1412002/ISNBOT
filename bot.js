@@ -10,7 +10,10 @@ var auteurmute = 0
 var test = 0
 var delai = 0
 var i = 0
+var historique = new array();
 var lastmessage =  0
+var lastlastmessage = 0
+var taille = 0
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -22,8 +25,13 @@ client.on('message', message =>{
     
     if(message.content.match(/!clear/i)){
         if(auteur ===  'Alex1412002#9761'){
-        message.delete();
-        lastmessage.delete();
+            taille = historique.lengt
+            historique[taille-1].delete();
+            historique.reverse();
+            historique.pop()
+            historique.reverse();
+            message.delete();
+        
         }
     }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
@@ -205,7 +213,12 @@ client.on('message', message =>{
         message.channel.send("Vote créé, allez-y");
         dernierMess = dernierMess + 1;
     }
-    lastmessage = message  
+    historique.push(message);
+    historique.reverse();
+    if(historique.lengt > 50){
+        historique.pop()
+    }
+    historique.reverse();
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
