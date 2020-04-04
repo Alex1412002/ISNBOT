@@ -22,17 +22,12 @@ client.on('ready', () => {
 client.on('message', message =>{
     auteur = message.author.tag
     historique.push(message);
+    taille = historique.length
     if(historique.length > 50){
         historique.shift();
     }
-    if(message.content.match(/!clear/i)){
-        if(auteur ===  'Alex1412002#9761'){
-            taille = historique.length
-            message.delete();
-            historique.shift();
-            historique[0].delete();
-            historique.shift();
-        }
+    if(message.content.match(/!test/i)) {
+          message.channel.send(taille);
     }
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
