@@ -29,7 +29,7 @@ client.on('message', message =>{
         if(auteur ===  'Alex1412002#9761'){
             taille = historique.lengt
             message.channel.send(taille);
-            historique[taille-1].delete();;
+            historique[taille-1].delete();
             historique.shift();
             message.delete();
         }
@@ -214,11 +214,6 @@ client.on('message', message =>{
         dernierMess = dernierMess + 1;
     }
     
-    historique.reverse();
-    if(historique.lengt > 50){
-        historique.pop();
-    }
-    historique.reverse();
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
