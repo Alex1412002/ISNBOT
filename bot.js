@@ -28,7 +28,6 @@ client.on('message', message =>{
     if(message.content.match(/!clear/i)){
         if(auteur ===  'Alex1412002#9761'){
             taille = historique.length
-            message.channel.send(taille);
             historique[taille-1].delete();
             historique.shift();
             message.delete();
