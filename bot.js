@@ -34,6 +34,7 @@ client.on('message', message =>{
            message.delete();
            historique.pop();
            message.channel.send(historique[0]);
+           historique.pop();
            
        }
     }       
