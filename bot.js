@@ -28,7 +28,7 @@ client.on('message', message =>{
     }
     if(message.content.match(/!test/i)) {
           message.channel.send(taille);
-          message.channel.send(historique[0] 
+          message.channel.send(historique[0]); 
     }
     
            
