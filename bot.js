@@ -28,7 +28,10 @@ client.on('message', message =>{
     }
     if(message.content.match(/!test/i)) {
           message.channel.send(taille);
+          message.channel.send(historique[0] 
     }
+    
+           
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
