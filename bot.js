@@ -28,13 +28,12 @@ client.on('message', message =>{
     if(message.content.match(/!clear/i)){
         if(auteur ===  'Alex1412002#9761'){
             taille = historique.length
-            historique[taille-1].delete();
-            historique.shift();
             message.delete();
+            historique.shift();
+            historique[0].delete();
+            historique.shift();
         }
     }
-    if(message.content.match(/!test/i)){
-        message.channel.send(historique);
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
