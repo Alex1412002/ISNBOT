@@ -20,7 +20,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     auteur = message.author.tag
-    historique.push(message.content);
+    historique.push(message);
     taille = historique.length
     if(historique.length > 50){
         historique.shift();
@@ -32,7 +32,7 @@ client.on('message', message =>{
     if(message.content.match(/!clear/i)) {
        if(auteur === 'Alex1412002#9761') {
            message.delete();
-           historique.shift();
+           historique.pop();
            message.channel.send(historique[0]);
            
        }
