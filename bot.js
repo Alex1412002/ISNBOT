@@ -42,20 +42,7 @@ client.on('message', message =>{
         dernierMess = 0;
     }
     
-    if (auteur != 'ISN bot#5674'){
-        if(memoire === auteur) { 
-            compteur +=1;
-        }
-        else {
-            compteur = 0
-        }
-        if (compteur >= 5){
-            message.channel.send("tu es une pipelette toi ");
-            compteur = 0
-        }
-        memoire = auteur
-    }
-        
+    
     if(message.content.match(/!emoji/i)){
        message.channel.send(client.emojis.get("693209803123589160").toString());
        message.channel.send("sinon on a :heart: ou :quasper:");
