@@ -35,13 +35,6 @@ client.on('message', message =>{
            historique.pop();
            historique[taille-2].delete();
            historique.pop();
-           
-       }
-       if(auteur === 'Sayday1#5908') {
-           message.delete();
-           historique.pop();
-           historique[taille-2].delete();
-           historique.pop();
        }
     }       
     
