@@ -21,6 +21,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     auteur = message.author.tag
+    historique.push(message);
     if(message.content.match(/!clear/i)){
         if(auteur ===  'Alex1412002#9761'){
             taille = historique.lengt
@@ -210,7 +211,7 @@ client.on('message', message =>{
         message.channel.send("Vote créé, allez-y");
         dernierMess = dernierMess + 1;
     }
-    historique.push(message);
+    
     historique.reverse();
     if(historique.lengt > 50){
         historique.pop();
