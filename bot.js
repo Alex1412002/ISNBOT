@@ -59,10 +59,6 @@ client.on('message', message =>{
     }
     if(message.content.match(/<@&689041074538283008>/i)){
        if(auteur != 'ISN bot#5674' && auteur != 'if(auteur === 'Alex1412002#9761') {
-           message.delete();
-           historique.pop();
-           historique[taille-2].delete();
-           historique.pop();'){
            message.channel.send("T'as bien réfléchi avant de t'adresser au Dieu ?");
        }
     }
