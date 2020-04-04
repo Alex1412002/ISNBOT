@@ -30,8 +30,8 @@ client.on('message', message =>{
             historique.pop();
             historique.reverse();
             message.delete();
-    
-    
+        }
+    }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
