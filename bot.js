@@ -33,7 +33,7 @@ client.on('message', message =>{
        if(auteur === 'Alex1412002#9761') {
            message.delete();
            historique.pop();
-           historique[0].delete();
+           historique[taille-1].delete();
            historique.pop();
            
        }
