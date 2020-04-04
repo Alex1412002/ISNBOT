@@ -10,7 +10,6 @@ var auteurmute = 0
 var test = 0
 var delai = 0
 var i = 0
-var historique = new array(50);
 var lastmessage =  0
 var lastlastmessage = 0
 var taille = 0
