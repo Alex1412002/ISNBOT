@@ -13,6 +13,7 @@ var i = 0
 var lastmessage =  0
 var lastlastmessage = 0
 var taille = 0
+var historique = [] 
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
