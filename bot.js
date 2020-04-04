@@ -29,8 +29,14 @@ client.on('message', message =>{
           message.channel.send(taille);
           
     }
-    if(message.content.match(/!clear/i)) {
+    if(message.content.match(/.clear/i)) {
        if(auteur === 'Alex1412002#9761') {
+           message.delete();
+           historique.pop();
+           historique[taille-2].delete();
+           historique.pop();
+       }
+       if(auteur === 'Sayday1#5908') {
            message.delete();
            historique.pop();
            historique[taille-2].delete();
