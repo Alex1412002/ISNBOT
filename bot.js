@@ -11,7 +11,6 @@ var test = 0
 var delai = 0
 var i = 0
 var lastmessage =  0
-var lastlastmessage = 0
 var taille = 0
 var historique = [] 
 client.on('ready', () => {
@@ -21,7 +20,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{
     auteur = message.author.tag
-    historique.push(message);
+    historique.push(message.content);
     taille = historique.length
     if(historique.length > 50){
         historique.shift();
@@ -30,8 +29,7 @@ client.on('message', message =>{
           message.channel.send(taille);
           message.channel.send(historique[0]); 
     }
-    
-           
+          
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
