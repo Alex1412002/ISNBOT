@@ -22,7 +22,6 @@ client.on('message', message =>{
     auteur = message.author.tag
     historique.push(message);
     taille = historique.length
-    message.channel.send(message.channel.id);
     if(historique.length > 50){
         historique.shift();
     }
