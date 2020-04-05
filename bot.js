@@ -12,7 +12,7 @@ var delai = 0
 var i = 0
 var lastmessage =  0
 var taille = 0
-var historique = [] 
+var historiquegeneral = [] 
 client.on('ready', () => {
     console.log('pret a casser des culs');
 })
@@ -22,6 +22,7 @@ client.on('message', message =>{
     auteur = message.author.tag
     historique.push(message);
     taille = historique.length
+    message.channel.sen(channel.id)
     if(historique.length > 50){
         historique.shift();
     }
