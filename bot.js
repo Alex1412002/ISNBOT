@@ -18,7 +18,7 @@ client.on('ready', () => {
 })
 
 
-client.on('message', message =>{
+client.on('message', message =>{ 
     auteur = message.author.tag
     historique.push(message);
     taille = historique.length
