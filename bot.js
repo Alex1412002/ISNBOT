@@ -12,7 +12,7 @@ var taillelaboratoire = 0
 var tailledetresse = 0
 var taillemusiques = 0
 /*init des historiques de chaque salon*/
-var historiquelaboratoire = []
+var historiquelaboratoire = [] 
 var historiqueblabla = [] 
 var historiquedetresse = []
 var historiquemusiques = []
