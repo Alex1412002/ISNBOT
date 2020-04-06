@@ -12,11 +12,18 @@ var tailleblabla = 0
 var taillelaboratoire = 0
 var tailledetresse = 0
 var taillemusiques = 0
+var tailletravail = 0
+var tailletestpourlebot = 0
+var taillereve = 0
+
 /*init des historiques de chaque salon*/
 var historiquelaboratoire = [] 
 var historiqueblabla = [] 
 var historiquedetresse = []
 var historiquemusiques = []
+var historiquetravail = []
+var historiquetestpourlebot = []
+var historiquereve = []
 
 /*Check de la connexion*/
 client.on('ready', () => {
@@ -45,12 +52,25 @@ client.on('message', message =>{
     if (message.channel.name === "musiques"){ 
        historiquemusiques.push(message)
     }
+    if (message.channel.name === "travail"){ 
+       historiquetravail.push(message)
+    }
+    if (message.channel.name === "test-pour-le-bot"){ 
+       historiquetestpourlebot.push(message)
+    }
+    if (message.channel.name === "salon-du-rêve"){ 
+       historiquereve.push(message)
+    }
+   
     
     /*mesure des tailles des historiques*/    
     tailleblabla = historiqueblabla.length
     taillelaboratoire = historiquelaboratoire.length
     tailledetresse = historiquedetresse.length
     taillemusiques = historiquemusiques.length
+    tailletravail = historiquetravail.length
+    tailletestpourlebot = historiquetestpourlebot.length
+    taillereve = historiquereve.length
     
     /*controle de la taille des historiques*/
     if(historiquelaboratoire.length > 50){
@@ -64,6 +84,15 @@ client.on('message', message =>{
     }
     if(historiquemusiques.length > 50){
         historiquemusiques.shift();
+    }
+    if(historiquetravail.length > 50){
+        historiquetravail.shift();
+    }
+    if(historiquetestpourlebot.length > 50){
+        historiquetestpourlebot.shift();
+    }
+    if(historiquereve.length > 50){
+        historiquereve.shift();
     }
         
     if(message.content.match(/.clear/i)) {
@@ -88,6 +117,21 @@ client.on('message', message =>{
                historiquemusiques.pop();
                historiquemusiques[taillemusiques-2].delete();
                historiquemusiques.pop(); 
+           }
+           if (message.channel.name === "travail"){  
+               historiquetravail.pop();
+               historiquetravail[tailletravail-2].delete();
+               historiquetravail.pop(); 
+           }
+           if (message.channel.name === "test-pour-le-bot"){  
+               historiquetestpourlebot.pop();
+               historiquetestpourlebot[tailletestpourlebot-2].delete();
+               historiquetestpourlebot.pop(); 
+           }
+           if (message.channel.name === "salon-du-rêve"){  
+               historiquereve.pop();
+               historiquereve[taillereve-2].delete();
+               historiquereve.pop(); 
            }
         }
     }   
