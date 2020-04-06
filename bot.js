@@ -46,7 +46,7 @@ client.on('message', message =>{
     }
     
     /*mesure des tailles des historiques*/    
-    tailleblabla = historique.length
+    tailleblabla = historiqueblabla.length
     taillelaboratoire = historiquelaboratoire.length
     tailledetresse = historiquedetresse.length
     taillemusiques = historiquemusiques.length
