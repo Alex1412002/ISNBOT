@@ -22,7 +22,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{ 
     auteur = message.author.tag
-    if (message.channel.id === 647491916094767107){ 
+    if (message.channel.name === "laboratoire"){ 
        historiqueGeneraltest.push(message);
        message.channel.send("je suis la");
     }
