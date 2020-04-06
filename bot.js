@@ -24,6 +24,7 @@ client.on('message', message =>{
     auteur = message.author.tag
     if (message.channel.id === 647491916094767107){ 
        historiqueGeneraltest.push(message);
+       message.channel.send("je suis la");
     }
     else { 
        historique.push(message) 
