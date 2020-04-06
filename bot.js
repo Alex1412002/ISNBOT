@@ -22,12 +22,11 @@ client.on('ready', () => {
 
 client.on('message', message =>{ 
     auteur = message.author.tag
-    if(message.channel.id === <647491916094767107>) {
-        message.channel.send("au bon endroit");
-    }
-    else{
-       historique.push(message);
-    }
+    (message.channel.send(message.channel.id)
+       
+    
+  
+    historique.push(message)
     taille = historique.length
     tailleGeneraltest = historiqueGeneraltest.length
     
