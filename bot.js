@@ -11,7 +11,9 @@ var test = 0
 var delai = 0
 var i = 0
 var lastmessage =  0
+var historiqueGeneraltest = []
 var taille = 0
+var tailleGeneraltest = 0
 var historique = [] 
 client.on('ready', () => {
     console.log('pret a casser des culs');
@@ -20,8 +22,18 @@ client.on('ready', () => {
 
 client.on('message', message =>{ 
     auteur = message.author.tag
-    historique.push(message);
+    if(message.channel.id === 647491916094767107) {
+        message.channel.send("au bon endroit");
+    }
+    else{
+       historique.push(message);
+    }
     taille = historique.length
+    tailleGeneraltest = historiqueGeneraltest.length
+    
+    if(historiqueGeneraltest.length > 50){
+        historiqueGeneraltest.shift();
+    }
     if(historique.length > 50){
         historique.shift();
     }
