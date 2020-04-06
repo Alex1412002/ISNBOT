@@ -22,7 +22,7 @@ client.on('ready', () => {
 
 client.on('message', message =>{ 
     auteur = message.author.tag
-    (message.channel.send(message.channel.id)
+    message.channel.send(message.channel.id)
        
     
   
