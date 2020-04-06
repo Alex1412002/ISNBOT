@@ -25,8 +25,8 @@ client.on('message', message =>{
     if(historique.length > 50){
         historique.shift();
     }
-    if(message.content.match(/!test/i)) {
-          message.channel.send(taille);
+    if(message.content.match(/!statut/i)) {
+          message.channel.send("je suis connecté");
           
     }
     if(message.content.match(/.clear/i)) {
