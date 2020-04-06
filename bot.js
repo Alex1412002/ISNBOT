@@ -48,7 +48,7 @@ client.on('message', message =>{
            message.delete();
            if (message.channel.name === "laboratoire"){  
                historiquelaboratoire.pop();
-               historiquelaboratoire[taille-2].delete();
+               historiquelaboratoire[taillelaboratoire-2].delete();
                historiquelaboratoire.pop();
            } 
            else{ 
