@@ -44,18 +44,19 @@ client.on('message', message =>{
           
     }
     if(message.content.match(/.clear/i)) {
-       if(auteur === 'Alex1412002#9761') || (auteur === 'Sayday1#5908'){
+       if(auteur === 'Alex1412002#9761' || auteur === 'Sayday1#5908'){
            message.delete();
            if (message.channel.name === "laboratoire"){  
                historiquelaboratoire.pop();
                historiquelaboratoire[taille-2].delete();
                historiquelaboratoire.pop();
-           { 
+           } 
            else{ 
                historique.pop();
                historique[taille-2].delete();
                historique.pop();
            }
+        }
     }       
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
