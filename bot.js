@@ -135,6 +135,11 @@ client.on('message', message =>{
            }
         }
     }   
+/*--------------------------------------------------------*/
+    
+/*                      text reaction                     */
+    
+/*--------------------------------------------------------*/
     if(message.content.match(/!statut/i)) {
           message.channel.send("je suis connecté");
           
