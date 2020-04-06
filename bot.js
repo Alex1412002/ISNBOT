@@ -1,48 +1,70 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-var memoire = 0
-var compteur = 0
-var auteur = 0
-var memoireblague = 0
-var variable_test = 0
-var dernierMess = 0
-var auteurmute = 0
-var test = 0
-var delai = 0
-var i = 0
-var lastmessage =  0
-var historiquelaboratoire = []
-var taille = 0
+const Discord = require('discord.js'); /* importation de la bibliotheque*/
+const client = new Discord.Client(); /*creation du compte discord du bot*/
+var compteur = 0 /* variable de la piplette*/
+var auteur = 0 /*variable de la piplette*/
+var variable_test = 0 /*jsp */
+var dernierMess = 0 /*jsp c ton truc chelou avec les reactions*/
+var auteurmute = 0 /*utilisateur dont le prochain message sera delete*/
+var test = 0 /* jsp*/
+/*init des tailles des historiques*/
+var tailleblabla = 0
 var taillelaboratoire = 0
-var historique = [] 
+var tailledetresse = 0
+var taillemusiques = 0
+/*init des historiques de chaque salon*/
+var historiquelaboratoire = []
+var historiqueblabla = [] 
+var historiquedetresse = []
+var historiquemusiques = []
+
+/*Check de la connexion*/
 client.on('ready', () => {
-    console.log('pret a casser des culs');
+    console.log('pret a casser des culs'); /*affichage dans la console*/
 })
 
-
+/*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
-    auteur = message.author.tag
-    if (message.channel.name === "laboratoire"){ 
-       historiquelaboratoire.push(message);
-       
-    }
-    else { 
-       historique.push(message)
-        
-    }
-    taille = historique.length
-    taillelaboratoire = historiquelaboratoire.length
+    auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
     
+/*--------------------------------------------------------*/
+    
+/*                  commandes de clear                    */
+    
+/*--------------------------------------------------------*/
+    /*ajout du message dans la bonne liste*/
+    if (message.channel.name === "laboratoire"){ 
+       historiquelaboratoire.push(message);   
+    }
+    if (message.channel.name === "blabla"){ 
+       historiqueblabla.push(message)
+    }
+    if (message.channel.name === "detresse"){ 
+       historiquedetresse.push(message)
+    }
+    if (message.channel.name === "musiques"){ 
+       historiquemusiques.push(message)
+    }
+    
+    /*mesure des tailles des historiques*/    
+    tailleblabla = historique.length
+    taillelaboratoire = historiquelaboratoire.length
+    tailledetresse = historiquedetresse.length
+    taillemusiques = historiquemusiques.length
+    
+    /*controle de la taille des historiques*/
     if(historiquelaboratoire.length > 50){
         historiquelaboratoire.shift();
     }
-    if(historique.length > 50){
-        historique.shift();
+    if(historiqueblabla.length > 50){
+        historiqueblabla.shift();
     }
-    if(message.content.match(/!statut/i)) {
-          message.channel.send("je suis connecté");
-          
+    if(historiquedetresse.length > 50){
+        historiquedetresse.shift();
     }
+    if(historiquemusiques.length > 50){
+        historiquemusiques.shift();
+    }
+        
     if(message.content.match(/.clear/i)) {
        if(auteur === 'Alex1412002#9761' || auteur === 'Sayday1#5908'){
            message.delete();
@@ -51,14 +73,40 @@ client.on('message', message =>{
                historiquelaboratoire[taillelaboratoire-2].delete();
                historiquelaboratoire.pop();
            } 
-           else{ 
-               historique.pop();
-               historique[taille-2].delete();
-               historique.pop();
+           if (message.channel.name === "blabla"){  
+               historiqueblabla.pop();
+               historiqueblabla[tailleblabla-2].delete();
+               historiqueblabla.pop();
+           }
+           if (message.channel.name === "detresse"){  
+               historiquedetresse.pop();
+               historiquedetresse[tailledetresse-2].delete();
+               historiquedetresse.pop();
+           }
+           if (message.channel.name === "musiques"){  
+               historiquemusiques.pop();
+               historiquemusiques[taillemusiques-2].delete();
+               historiquemusiques.pop();
            }
         }
-    }       
-    
+    }   
+    if(message.content.match(/!statut/i)) {
+          message.channel.send("je suis connecté");
+          
+    }
+    if (auteur != 'ISN bot#5674'){
+        if(memoire === auteur) { 
+            compteur +=1;
+        }
+        else {
+            compteur = 0
+        }
+        if (compteur >= 5){
+            message.channel.send("tu es une pipelette toi ");
+            compteur = 0
+        }
+        memoire = auteur
+    }
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
@@ -211,10 +259,6 @@ client.on('message', message =>{
                 break;
         }
         
-    }
-    if(message.content.match(/!rep/i) && memoireblague === 1 && message.author.tag != 'ISN bot#5674'){
-       message.channel.send("Ils sortent du corps enseignant");
-        memoireblague = 0;
     }
     if(message.content.match(/https:\/\/tenor.com/i) && message.author.tag === "Sishoas#5408"){
          message.delete();
