@@ -11,9 +11,9 @@ var test = 0
 var delai = 0
 var i = 0
 var lastmessage =  0
-var historiqueGeneraltest = []
+var historiquelaboratoire = []
 var taille = 0
-var tailleGeneraltest = 0
+var taillelaboratoire = 0
 var historique = [] 
 client.on('ready', () => {
     console.log('pret a casser des culs');
@@ -23,7 +23,7 @@ client.on('ready', () => {
 client.on('message', message =>{ 
     auteur = message.author.tag
     if (message.channel.name === "laboratoire"){ 
-       historiqueGeneraltest.push(message);
+       historiquelaboratoire.push(message);
        
     }
     else { 
@@ -31,10 +31,10 @@ client.on('message', message =>{
         
     }
     taille = historique.length
-    tailleGeneraltest = historiqueGeneraltest.length
+    taillelaboratoire = historiquelaboratoire.length
     
-    if(historiqueGeneraltest.length > 50){
-        historiqueGeneraltest.shift();
+    if(historiquelaboratoire.length > 50){
+        historiquelaboratoire.shift();
     }
     if(historique.length > 50){
         historique.shift();
@@ -44,18 +44,18 @@ client.on('message', message =>{
           
     }
     if(message.content.match(/.clear/i)) {
-       if(auteur === 'Alex1412002#9761') {
+       if(auteur === 'Alex1412002#9761') || (auteur === 'Sayday1#5908'){
            message.delete();
-           historique.pop();
-           historique[taille-2].delete();
-           historique.pop();
-       }
-       if(auteur === 'Sayday1#5908') {
-           message.delete();
-           historique.pop();
-           historique[taille-2].delete();
-           historique.pop();
-       }
+           if (message.channel.name === "laboratoire"){  
+               historiquelaboratoire.pop();
+               historiquelaboratoire[taille-2].delete();
+               historiquelaboratoire.pop();
+           { 
+           else{ 
+               historique.pop();
+               historique[taille-2].delete();
+               historique.pop();
+           }
     }       
     
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
