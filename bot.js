@@ -27,7 +27,8 @@ client.on('message', message =>{
        message.channel.send("je suis la");
     }
     else { 
-       historique.push(message) 
+       historique.push(message)
+        message.channel.send("je suis pas la");
     }
     taille = historique.length
     tailleGeneraltest = historiqueGeneraltest.length
