@@ -87,7 +87,7 @@ client.on('message', message =>{
            if (message.channel.name === "musiques"){  
                historiquemusiques.pop();
                historiquemusiques[taillemusiques-2].delete();
-               historiquemusiques.pop();
+               historiquemusiques.pop(); 
            }
         }
     }   
