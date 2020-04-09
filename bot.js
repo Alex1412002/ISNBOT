@@ -107,7 +107,7 @@ client.on('message', message =>{
     }
         
     if(message.content.match(/.clear/i)) {
-       if(auteur === 'Sayday1#5908' || auteur === 'ISN bot#5674'){
+       if(auteur === 'Alex1412002#9761' || auteur === 'Sayday1#5908' || auteur === 'ISN bot#5674'){
            message.delete();
            if (message.channel.name === "laboratoire"){  
                historiquelaboratoire.pop();
