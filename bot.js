@@ -141,7 +141,7 @@ client.on('message', message =>{
     
 /*--------------------------------------------------------*/
     if(message.content.match(/!presentation/i)) {
-          message.channel.send("Bonjour, Je suis l'assistant ! j'ai été concu par dieu et par l'assistant de l'assistant. Bienvenue sur l'autoroute du rire. \nPour me presenter or to introduce myself (sa fait stylé en anglais vous trouvez pas ? :thinking:)");
+          message.channel.send("Bonjour, Je suis l'assistant ! j'ai été concu par **dieu** et par l'**Aassistant de l'Assistant**. Bienvenue sur l'**autoroute du rire**. \nPour me presenter or to introduce myself (sa fait stylé en anglais vous trouvez pas ? :thinking:)\nDcp voici mes differentes qualités:\nPour avoir un rappel des commandes : `!presentation\nPour une bonne boutade : `!blague");
           
     }
     if(message.content.match(/!statut/i)) {
