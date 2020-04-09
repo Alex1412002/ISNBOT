@@ -140,6 +140,10 @@ client.on('message', message =>{
 /*                      text reaction                     */
     
 /*--------------------------------------------------------*/
+    if(message.content.match(/!presentation/i)) {
+          message.channel.send("Bonjour, Je suis l'assistant ! j'ai été concu par dieu et par l'assistant de l'assistant. Bienvenue sur l'autoroute du rire. \nPour me presenter or to introduce myself (sa fait stylé en anglais vous trouvez pas ? :thinking:)");
+          
+    }
     if(message.content.match(/!statut/i)) {
           message.channel.send("je suis connecté");
           
