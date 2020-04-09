@@ -320,7 +320,11 @@ client.on('message', message =>{
     }
     randomnumber = Math.floor(Math.random()*501)
     if(randomnumber === 5 ) {
-        message.channel.send("mais quel est le rapport avec la choucroute ?");
+        message.channel.send("Bon je me lance parce que c'est quelque chose qui me gene, en fait sa m'embete de ne pas vous dire la verité... Du coup je me lance : je pratique la branlette sur instagram. ");
+    }
+    randomnumber = Math.floor(Math.random()*501)
+    if(randomnumber === 6 ) {
+        message.channel.send("Tient donc je trouve pertinent de raconter ma vie pour animer ce salon. Alors voilà : ma plus grande desillusion a été d'apprendre que Eloi et Nial étaient gays");
     }
     
     
