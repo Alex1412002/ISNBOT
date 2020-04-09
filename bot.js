@@ -7,6 +7,7 @@ var dernierMess = 0 /*jsp c ton truc chelou avec les reactions*/
 var auteurmute = 0 /*utilisateur dont le prochain message sera delete*/
 var test = 0 /* jsp*/
 var memoire = 0
+var pardon = 0 /*memoire de l'users qui a utilisé .clear*/
 /*init des tailles des historiques*/
 var tailleblabla = 0
 var taillelaboratoire = 0
@@ -38,6 +39,17 @@ client.on('message', message =>{
 /*                  commandes de clear                    */
     
 /*--------------------------------------------------------*/
+    if(auteur === pardon){
+        if(message.content.match(/pardon/i)) {
+            pardon = 0 
+            message.channel.send("bon toutou")
+        }
+        else {
+            message.channel.send(".clear")
+            message.channel.send("j'attends toujours le mot magique")
+            
+        }
+    }
     /*ajout du message dans la bonne liste*/
     if (message.channel.name === "laboratoire"){ 
        historiquelaboratoire.push(message);   
@@ -95,7 +107,7 @@ client.on('message', message =>{
     }
         
     if(message.content.match(/.clear/i)) {
-       if(auteur === 'Alex1412002#9761' || auteur === 'Sayday1#5908'){
+       if(auteur === 'Sayday1#5908' || auteur === 'ISN bot#5674'){
            message.delete();
            if (message.channel.name === "laboratoire"){  
                historiquelaboratoire.pop();
@@ -133,7 +145,12 @@ client.on('message', message =>{
                historiquereve.pop(); 
            }
         }
-    }   
+        else {
+            message.channel.send("Par contre je suis pas ton chien alors dit pardon !")
+            pardon = auteur
+        }
+    }
+    
 /*--------------------------------------------------------*/
     
 /*                      text reaction                     */
