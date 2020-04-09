@@ -197,7 +197,7 @@ client.on('message', message =>{
         /*detecte si le message contient le mot bot*/
         if(auteurmute!= 0){
            if(message.author.tag === auteurmute){
-               message.delete();
+               message.channel.send(".clear");
                message.channel.send("*message supprimé*\nAucun interet de lire cette chose ");
                auteurmute = 0
            }
