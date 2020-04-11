@@ -355,7 +355,7 @@ client.on('message', message =>{
         dernierMess = 0;
     }
     randomnumber = Math.floor(Math.random()*301)
-    if(message.content.match(/!vote/i){
+    if(message.content.match(/!vote/i)){
         var candidat1 = randomnumber = Math.floor(Math.random()*11)
         var candidat2 = randomnumber = Math.floor(Math.random()*11)
         if(candidat1 === candidat2){
@@ -430,8 +430,8 @@ client.on('message', message =>{
         message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)");
         message.react('🌑');
         message.react('🌕');
-        
-    }
+    }    
+    
     if(message.content.match(/!emoji/i)){
        message.channel.send(client.emojis.get("693209803123589160").toString());
        message.channel.send("sinon on a :heart: ou :quasper:");
