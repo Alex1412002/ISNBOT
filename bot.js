@@ -371,7 +371,7 @@ client.on('message', message =>{
             candidat1 = "<@404351302429310987>"/*eloi*/
         }
         if(randomnumber === 2){
-            candidat1 = "@409305476141154305>" /*maia*/
+            candidat1 = "<@409305476141154305>" /*maia*/
         }
         if(randomnumber === 3){
             candidat1 = "<@308655929195364364>" /*greg*/
