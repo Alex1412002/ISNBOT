@@ -433,7 +433,7 @@ client.on('message', message =>{
         if(candidat2 === 9){
             candidat2 = "<@336496003987537920>" /*alex*/
         }
-        message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)");
+        message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)celui qui vote 🌍 jle defonce egalement");
         vote = 1
     }    
     
