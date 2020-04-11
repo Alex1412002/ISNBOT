@@ -16,6 +16,7 @@ var taillemusiques = 0
 var tailletravail = 0
 var tailletestpourlebot = 0
 var taillereve = 0
+var vote = 0
 
 /*init des historiques de chaque salon*/
 var historiquelaboratoire = [] 
@@ -355,6 +356,11 @@ client.on('message', message =>{
         dernierMess = 0;
     }
     randomnumber = Math.floor(Math.random()*301)
+    if(vote === 1){
+        vote = 0
+        message.react('🌑');
+        message.react('🌕');
+    }    
     if(message.content.match(/!vote/i)){
         var candidat1 = Math.floor(Math.random()*11)
         var candidat2 = Math.floor(Math.random()*11)
@@ -428,8 +434,7 @@ client.on('message', message =>{
             candidat2 = "<@336496003987537920>" /*alex*/
         }
         message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)");
-        message.react('🌑');
-        message.react('🌕');
+        vote = 1
     }    
     
     if(message.content.match(/!emoji/i)){
