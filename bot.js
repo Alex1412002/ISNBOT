@@ -354,11 +354,83 @@ client.on('message', message =>{
     if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
         dernierMess = 0;
     }
-    if(message.content.match(/647166866329960462> on fait un vote/i)){
+    randomnumber = Math.floor(Math.random()*301)
+    if(message.content.match(/!vote/i){
+        var candidat1 = randomnumber = Math.floor(Math.random()*11)
+        var candidat2 = randomnumber = Math.floor(Math.random()*11)
+        if(candidat1 === candidat2){
+            candidat2 = candidat2 + Math.floor(Math.random()*10)
+            if(candidat2 > 10){
+                candidat2 = candidat2 - 10
+            }
+        }
+        if(randomnumber === 0){
+            candidat1 = "<@684457257374711838>" /*victor*/
+        }
+        if(randomnumber === 1){
+            candidat1 = "<@404351302429310987>"/*eloi*/
+        }
+        if(randomnumber === 2){
+            candidat1 = "@409305476141154305>" /*maia*/
+        }
+        if(randomnumber === 3){
+            candidat1 = "<@308655929195364364>" /*greg*/
+        }
+        if(randomnumber === 4){
+            candidat1 = "<@689041099905302541>" /*lina*/
+        }
+        if(randomnumber === 5){
+            candidat1 = "@665667561605693440>" /*lea*/
+        }
+        if(randomnumber === 6){
+            candidat1 = "<@644194823300972544>" /*armelle*/
+        }
+        if(randomnumber === 7){
+            candidat1 = "<@689039643378843770>" /*juliette*/
+        }
+        if(randomnumber === 8){
+            candidat1 = "<@375319082200858634>" /*arthur*/
+        }
+        if(randomnumber === 9){
+            candidat1 = "<@336496003987537920>" /*alex*/
+        }
+            
+            
+       
+        if(randomnumber === 0){
+            candidat2 = "<@684457257374711838>" /*victor*/
+        }
+        if(randomnumber === 1){
+            candidat2 = "<@404351302429310987>" /*eloi*/
+        }
+        if(randomnumber === 2){
+            candidat2 = "<@409305476141154305>" /*maia*/
+        }
+        if(randomnumber === 3){
+            candidat2 = "<@308655929195364364>" /*greg*/
+        }
+        if(randomnumber === 4){
+            candidat2 = "<@689041099905302541>" /*lina*/
+        }
+        if(randomnumber === 5){
+            candidat2 = "<@665667561605693440>" /*lea*/
+        }
+        if(randomnumber === 6){
+            candidat2 = "<@644194823300972544>" /*armelle*/
+        }
+        if(randomnumber === 7){
+            candidat2 = "<@689039643378843770>"/*juliette*/
+        }
+        if(randomnumber === 8){
+            candidat2 = "<@375319082200858634>" /*arthur*/
+        }
+        if(randomnumber === 9){
+            candidat2 = "<@336496003987537920>" /*alex*/
+        }
+        message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)");
         message.react('🌑');
         message.react('🌕');
-        message.channel.send("Vote créé, allez-y");
-        dernierMess = dernierMess + 1;
+        
     }
     if(message.content.match(/!emoji/i)){
        message.channel.send(client.emojis.get("693209803123589160").toString());
