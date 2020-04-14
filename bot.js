@@ -338,11 +338,10 @@ client.on('message', message =>{
     }
     randomnumber = Math.floor(Math.random()*501)
     if(randomnumber === 5 ) {
-        message.channel.send("Bon je me lance parce que c'est quelque chose qui me gene, en fait sa m'embete de ne pas vous dire la verité... Du coup je me lance : je pratique la branlette sur instagram. ");
-    }
+        message.channel.send("Flash info : gregoire a un bon peit cul de cycliste")
     randomnumber = Math.floor(Math.random()*501)
     if(randomnumber === 6 ) {
-        message.channel.send("Tient donc je trouve pertinent de raconter ma vie pour animer ce salon. Alors voilà : ma plus grande desillusion a été d'apprendre que Eloi et Nial étaient gays");
+        message.channel.send("D'ailleurs, vous ai-je dis que je n'etait pas sensible au stress ? En meme temps la pression il vaut mieux la boire que la subir.");
     }
     
     
