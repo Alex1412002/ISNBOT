@@ -339,6 +339,7 @@ client.on('message', message =>{
     randomnumber = Math.floor(Math.random()*501)
     if(randomnumber === 5 ) {
         message.channel.send("Flash info : gregoire a un bon peit cul de cycliste")
+    }
     randomnumber = Math.floor(Math.random()*501)
     if(randomnumber === 6 ) {
         message.channel.send("D'ailleurs, vous ai-je dis que je n'etait pas sensible au stress ? En meme temps la pression il vaut mieux la boire que la subir.");
@@ -347,13 +348,11 @@ client.on('message', message =>{
     
 /*--------------------------------------------------------*/
     
-/*                 truc inachevé  ou chelou               */
+/*            progra du vote (partie detection)           */
     
 /*--------------------------------------------------------*/
 
-    if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
-        dernierMess = 0;
-    }
+    
     randomnumber = Math.floor(Math.random()*301)
     if(vote === 1){
         vote = 0
@@ -435,7 +434,16 @@ client.on('message', message =>{
         message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)celui qui vote 🌍 jle defonce egalement");
         vote = 1
     }    
+/*--------------------------------------------------------*/
     
+/*                      truc chelou                       */
+    
+/*--------------------------------------------------------*/        
+        
+        
+    if(message.content.match(/ /i) && auteur != 'ISN bot#5674'){
+        dernierMess = 0;
+    }
     if(message.content.match(/!emoji/i)){
        message.channel.send(client.emojis.get("693209803123589160").toString());
        message.channel.send("sinon on a :heart: ou :quasper:");
@@ -464,14 +472,15 @@ client.on('messageReactionAdd', (reaction, user) =>{
     }
 });
 
-client.on('emojiCreate', lemoji =>{
-    client.channels.get("689039870915903554").send("Y a un nouvel emoji les enfants");
-});
+
 
 client.on('typingStart', (channel, user) =>{
-    if(channel.id === "689788626418401308" && dernierMess === 0){
-        channel.send("Il va m'écrire quoi lui");
-        dernierMess = dernierMess + 1;
+    if(dernierMess === 0){
+        randomnumber = Math.floor(Math.random()*101)
+        if(randomnumber = 5){
+            channel.send("je sens une connerie arriver");
+            dernierMess = dernierMess + 1;
+        }
     }
 });
 
@@ -483,21 +492,14 @@ client.on('message', message  => {
      }
 });
 
-client.on('message', message  => {
-     if(message.author.tag === '' ) {
-        message.channel.send('Mais tais toi !');     
-     }
     
-});
-
+/*zone 51*/
+    
 client.on('voiceStateUpdate', (ancien, nouveau)  => {
 });
-
-client.on('message', message  => {
-     if(message.author.tag === 'Nine-Eagle#7414' ) {
-        if(message.content.match(/https:\/\/tenor.com/i)){
-            message.delete();
-        }     
-     }
+    client.on('emojiCreate', lemoji =>{
+    client.channels.get("689039870915903554").send("Y a un nouvel emoji les enfants");
 });
+
+
 client.login(process.env.BOT_TOKEN);
