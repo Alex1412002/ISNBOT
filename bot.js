@@ -475,13 +475,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
 
 
 client.on('typingStart', (channel, user) =>{
-    if(dernierMess === 0){
-        randomnumber = Math.floor(Math.random()*101)
-        if(randomnumber = 5){
-            channel.send("je sens une connerie arriver");
-            dernierMess = dernierMess + 1;
-        }
-    }
+    
 });
 
 client.on('message', message  => {
