@@ -17,6 +17,8 @@ var tailletravail = 0
 var tailletestpourlebot = 0
 var taillereve = 0
 var vote = 0
+var votenoir = 0
+var voteclair = 0
 
 /*init des historiques de chaque salon*/
 var historiquelaboratoire = [] 
@@ -344,7 +346,11 @@ client.on('message', message =>{
     
 /*--------------------------------------------------------*/
 
-    
+    if(message.content.match(/!end/i)){
+        message.channel.send("vote terminé");
+        votenoir = 0
+        voteclair = 0
+    }
     randomnumber = Math.floor(Math.random()*301)
     if(vote === 1){
         vote = 0
@@ -457,11 +463,11 @@ client.on('messageReactionAdd', (reaction, user) =>{
     }
     if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '🌑'){
         reaction.message.channel.send("vote noir");
-        
+        votenoir = votenoir + 1
     }
     if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '🌕'){
         reaction.message.channel.send("vote clair");
-        
+        voteclair = voteclair + 1
     }
 
 });
