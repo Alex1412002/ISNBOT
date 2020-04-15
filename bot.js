@@ -450,18 +450,16 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    var randomnumber = Math.floor(Math.random()*2)
-    if(user.tag != 'ISN bot#5674' && randomnumber === 1 && reaction.emoji.name != '❤️'){
-        reaction.message.channel.send(`${user} d'où tu réagis avec un ` + client.emojis.get(reaction.emoji.id.toString()).toString());
-    }
     if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '❤️' && dernierMess === 0){
         reaction.message.channel.send("j'aime les coeurs 😊");
         reaction.message.react('❤️');
         dernierMess = dernierMess + 1;
     }
-    if(reaction.emoji.name != '❤️' && dernierMess === 0){
-        reaction.message.react('🌍');
+    if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '🌑'){
+        reaction.message.channel.send("vote noir");
+        
     }
+
 });
 
 
