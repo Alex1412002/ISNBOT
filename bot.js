@@ -459,6 +459,10 @@ client.on('messageReactionAdd', (reaction, user) =>{
         reaction.message.channel.send("vote noir");
         
     }
+    if(user.tag != 'ISN bot#5674' && reaction.emoji.name === '🌕'){
+        reaction.message.channel.send("vote clair");
+        
+    }
 
 });
 
