@@ -336,14 +336,6 @@ client.on('message', message =>{
     if(randomnumber === 5 ) {
         message.channel.send("mais quel est le rapport avec la choucroute ?");
     }
-    randomnumber = Math.floor(Math.random()*501)
-    if(randomnumber === 5 ) {
-        message.channel.send("Flash info : gregoire a un bon peit cul de cycliste")
-    }
-    randomnumber = Math.floor(Math.random()*501)
-    if(randomnumber === 6 ) {
-        message.channel.send("D'ailleurs, vous ai-je dis que je n'etait pas sensible au stress ? En meme temps la pression il vaut mieux la boire que la subir.");
-    }
     
     
 /*--------------------------------------------------------*/
@@ -475,6 +467,10 @@ client.on('messageReactionAdd', (reaction, user) =>{
 
 
 client.on('typingStart', (channel, user) =>{
+    randomnumber =  Math.floor(Math.random()*101)
+    if(randomnumber = 1){
+        channel.send("je sens une connerie arriver");
+    }
     
 });
 
