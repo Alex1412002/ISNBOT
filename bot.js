@@ -468,7 +468,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
 
 client.on('typingStart', (channel, user) =>{
     randomnumber =  Math.floor(Math.random()*101)
-    if(randomnumber = 1){
+    if(randomnumber === 1){
         channel.send("je sens une connerie arriver");
     }
     
