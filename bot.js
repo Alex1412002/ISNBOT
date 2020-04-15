@@ -450,7 +450,7 @@ client.on('message', message =>{
 });
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    var randomnumber = Math.floor(Math.random()*4)
+    var randomnumber = Math.floor(Math.random()*2)
     if(user.tag != 'ISN bot#5674' && randomnumber === 1 && reaction.emoji.name != '❤️'){
         reaction.message.channel.send(`${user} d'où tu réagis avec un ` + client.emojis.get(reaction.emoji.id.toString()).toString());
     }
@@ -468,7 +468,7 @@ client.on('messageReactionAdd', (reaction, user) =>{
 
 client.on('typingStart', (channel, user) =>{
     randomnumber =  Math.floor(Math.random()*101)
-    if(randomnumber = 1 && channel.id == "689788626418401308"){
+    if(randomnumber = 1){
         channel.send("je sens une connerie arriver");
     }
     
