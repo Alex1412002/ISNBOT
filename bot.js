@@ -446,7 +446,26 @@ client.on('message', message =>{
         }
         message.channel.send("bon je m'acharne sur qui ? 🌑 pour"+candidat1+"🌕 pour"+candidat2+"(plus tard car l'option n'est pas terminé)celui qui vote 🌍 jle defonce egalement");
         vote = 1
-    }    
+        
+    }
+    if(message.content.match(/!end/i)){
+        message.channel.send("vote terminé vote noir = "+ votenoir+",voteclair = "+voteclair);
+        if(votenoir < voteclair){
+            message.channel.send("du coup je m'acharne sur "+candidat1);
+        }
+        else{
+            message.channel.send("du coup je m'acharne sur "+candidat2);
+            
+        }
+        if( votenoir === voteclair){
+            message.channel.send("les bancs doivent aussi avoir des penalités non ?");
+        }    
+        votenoir = 0
+        voteclair = 0
+        candidat1 = 0
+        candidat2 = 0
+            
+    }
 /*--------------------------------------------------------*/
     
 /*                      truc chelou                       */
