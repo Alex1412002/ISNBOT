@@ -347,7 +347,7 @@ client.on('message', message =>{
 /*--------------------------------------------------------*/
 
     if(message.content.match(/!end/i)){
-        message.channel.send("vote terminé");
+        message.channel.send("vote terminé vote noir = "+ votenoir+",voteclair = "+voteclair);
         votenoir = 0
         voteclair = 0
     }
