@@ -19,6 +19,8 @@ var taillereve = 0
 var vote = 0
 var votenoir = 0
 var voteclair = 0
+var candidat1 = 0
+var candidat2 = 0
 
 /*init des historiques de chaque salon*/
 var historiquelaboratoire = [] 
@@ -348,8 +350,21 @@ client.on('message', message =>{
 
     if(message.content.match(/!end/i)){
         message.channel.send("vote terminé vote noir = "+ votenoir+",voteclair = "+voteclair);
+        if(votenoir < voteclair){
+            message.channel.send("du coup je m'acharne sur "+candidat1);
+        }
+        else{
+            message.channel.send("du coup je m'acharne sur "+candidat2);
+            
+        }
+        if( votenoir === voteclair){
+            message.channel.send("les bancs doivent aussi avoir des penalités non ?");
+        }    
         votenoir = 0
         voteclair = 0
+        candidat1 = 0
+        candidat2 = 0
+            
     }
     randomnumber = Math.floor(Math.random()*301)
     if(vote === 1){
