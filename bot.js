@@ -163,7 +163,7 @@ client.on('message', message =>{
 /*--------------------------------------------------------*/
     if(auteur != 'ISN bot#5674'){ 
         if(message.content.match(/!DJadd/i)) {
-            message.delete();
+            message.channel.send("on va essayer")
             
         }
         /*presentation du bot*/
