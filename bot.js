@@ -162,7 +162,10 @@ client.on('message', message =>{
     
 /*--------------------------------------------------------*/
     if(auteur != 'ISN bot#5674'){ 
-        
+        if(message.content.match(/!DJadd/i)) {
+            message.delete();
+            message.author.addRole(689523779705241613)
+        }
         /*presentation du bot*/
         if(message.content.match(/!presentation/i)) {
               message.channel.send("Bonjour, Je suis l'assistant ! j'ai été concu par **dieu** et par l'**Aassistant de l'Assistant**. Bienvenue sur l'**autoroute du rire**. \nPour me presenter or to introduce myself (sa fait stylé en anglais vous trouvez pas ? :thinking:) voici mes differentes qualités:\nPour avoir un rappel des commandes : `!presentation`\nPour une bonne boutade : `@assistant raconte moi une blague`\nPour verifier que je suis present : `!statut`\nSans compter mes nombreuses interventions qui animeront vivement les discussions.\nVoila on rigole on rigole mais on voit pas le fond du bol. N'oubliez pas : RESTEZ CHEZ VOUS");
