@@ -164,7 +164,7 @@ client.on('message', message =>{
     if(auteur != 'ISN bot#5674'){ 
         if(message.content.match(/!DJadd/i)) {
             message.delete();
-            message.author.addRole(689523779705241613)
+            
         }
         /*presentation du bot*/
         if(message.content.match(/!presentation/i)) {
