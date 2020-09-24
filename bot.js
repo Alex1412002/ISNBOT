@@ -51,7 +51,7 @@ client.on('message', message =>{
     }
 })
 }
-if(maintenance != 1){
+else {
 /*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
