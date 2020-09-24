@@ -7,7 +7,7 @@ var dernierMess = 0 /*jsp c ton truc chelou avec les reactions*/
 var auteurmute = 0 /*utilisateur dont le prochain message sera delete*/
 var test = 0 /* jsp*/
 var memoire = 0
-var maintenance = 0
+var maintenance = 1
 var pardon = 0 /*memoire de l'users qui a utilisé .clear*/
 /*init des tailles des historiques*/
 var tailleblabla = 0
