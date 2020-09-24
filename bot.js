@@ -1,5 +1,5 @@
 const Discord = require('discord.js'); /* importation de la bibliotheque*/  
-const client = new Discord.Client(); /*creation du compte discord du bot*/
+const client = new Discord.Client(); /*creation du compte discord du bot*/ 
 var compteur = 0 /* variable de la piplette*/
 var auteur = 0 /*variable de simplification*/
 var variable_test = 0 /*jsp */
