@@ -174,7 +174,7 @@ client.on('message', message =>{
         
         /*commande pour test le bon fonctionnement du code*/
         if(message.content.match(/!statut/i)) { 
-          message.channel.send("je suis connecté");
+          message.channel.send("je suis connecté mais j'ai quelques soucis parce qu'on me rebidouille. il est possible que je sois en maintenance regulierement ");
         }
         
         /*!assistant*/
