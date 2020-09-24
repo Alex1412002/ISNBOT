@@ -7,6 +7,7 @@ var dernierMess = 0 /*jsp c ton truc chelou avec les reactions*/
 var auteurmute = 0 /*utilisateur dont le prochain message sera delete*/
 var test = 0 /* jsp*/
 var memoire = 0
+var maintenance = 0
 var pardon = 0 /*memoire de l'users qui a utilisé .clear*/
 /*init des tailles des historiques*/
 var tailleblabla = 0
@@ -34,11 +35,37 @@ var historiquereve = []
 /*Check de la connexion*/
 client.on('ready', () => {
     console.log('pret a casser des culs'); /*affichage dans la console*/
+    
 })
-
+if(maintenance === 1){
+client.on('message', message =>{ 
+    if(auteur === 'Alex1412002#9761'){
+        if(message.content.match(/.maintenanceOFF/i)) {
+            maintenance = 0
+            message.channel.send("le bot n'est plus en maintenance.")
+        }
+        
+    }
+    if(message.content.match(/!statut/i)) {
+            message.channel.send("je suis en maintenance.")
+    }
+})
+}
+if(maintenance != 1){
 /*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
+    if(message.content.match(/.maintenanceON/i)) {
+        if(auteur === 'Alex1412002#9761'){ 
+            maintenance = 1
+            message.channel.send("Le bot est en maintenance. Aucune commande n'est possible de la pars des utilisateurs.")
+        }
+        else {
+            message.channel.send("Tu n'as pas la permission de mettre le bot en maintenance")
+            
+                             
+        }
+    }
 /*--------------------------------------------------------*/
     
 /*                  commandes de clear                    */
@@ -174,7 +201,7 @@ client.on('message', message =>{
         
         /*commande pour test le bon fonctionnement du code*/
         if(message.content.match(/!statut/i)) { 
-          message.channel.send("je suis connecté mais j'ai quelques soucis parce qu'on me rebidouille. il est possible que je sois en maintenance regulierement ");
+          message.channel.send("je suis connecté");
         }
         
         /*!assistant*/
@@ -536,6 +563,6 @@ client.on('voiceStateUpdate', (ancien, nouveau)  => {
     client.on('emojiCreate', lemoji =>{
     client.channels.get("689039870915903554").send("Y a un nouvel emoji les enfants");
 });
-
+}
  
 client.login(process.env.BOT_TOKEN);
