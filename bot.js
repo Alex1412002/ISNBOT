@@ -11,17 +11,18 @@ client.on('ready', () => {
 /*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
-    if(message.content.match(/!!statut/i)) {
-        message.channel.send("je suis en ligne");
-    }
-
-
+    if(auteur !== 'ISN bot#5674'){ 
 /*--------------------------------------------------------*/
     
 /*                      text reaction                     */
     
 /*--------------------------------------------------------*/
-    if(auteur !== 'ISN bot#5674'){ 
+        if(message.content.match(/!!statut/i)) {
+            message.channel.send("je suis en ligne");
+        }
+        if(message.content.match(/!!help/i)) {
+        message.channel.send("__Liste des commandes :__\n\n - ```!!statut``` : pour check si je suis la\n - ```!!blague``` : pour une bonne boutade\n - *coming soon*"  );
+        }
         /*detecte la commande de la blague et en raconte une aleatoirement*/
         if(message.content.match(/!!blague/i)){
             var blague = Math.floor(Math.random()*30)
