@@ -145,6 +145,6 @@ client.on('message', message =>{
     client.on('emojiCreate', lemoji =>{
     client.channels.get("689039870915903554").send("Y a un nouvel emoji les enfants");
 });
-}
+}*/
  
 client.login(process.env.BOT_TOKEN);
