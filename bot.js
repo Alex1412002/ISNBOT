@@ -12,7 +12,7 @@ client.on('ready', () => {
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
     if(message.content.match(/!!status/i)) {
-        message.channel.send("je suis en ligne")
+        message.channel.send("je suis en ligne");
     }
 
 
@@ -21,7 +21,7 @@ client.on('message', message =>{
 /*                      text reaction                     */
     
 /*--------------------------------------------------------*/
-    if(auteur != 'ISN bot#5674'){ 
+    if(auteur !== 'ISN bot#5674'){ 
         /*detecte la commande de la blague et en raconte une aleatoirement*/
         if(message.content.match(/!!blague/i)){
             var blague = Math.floor(Math.random()*30)
