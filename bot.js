@@ -20,6 +20,8 @@ client.on('message', message =>{
         if(message.content.match(/!!statut/i)) {
             message.channel.send("je suis en ligne");
         }
+        if(message.content.match(/!!test/i)) {
+            message.channel.send(message.content);
         if(message.content.match(/!!help/i)) {
         message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - *coming soon*"  );
         }
