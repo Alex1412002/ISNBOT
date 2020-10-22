@@ -1,7 +1,6 @@
 const Discord = require('discord.js'); /* importation de la bibliotheque*/  
 const client = new Discord.Client(); /*creation du compte discord du bot*/     
 var auteur = 0 /*variable de simplification*/
-var memoire = 0
 
 
 /*Check de la connexion*/
@@ -12,17 +11,10 @@ client.on('ready', () => {
 /*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
-    if(message.content.match(/.maintenanceON/i)) {
-        if(auteur === 'Alex1412002#9761'){ 
-            maintenance = 1
-            message.channel.send("Le bot est en maintenance. Aucune commande n'est possible de la pars des utilisateurs.")
-        }
-        else {
-            message.channel.send("Tu n'as pas la permission de mettre le bot en maintenance")
-            
-                             
-        }
+    if(message.content.match(/!!status/i)) {
+        message.channel.send("je suis en ligne")
     }
+
 
 /*--------------------------------------------------------*/
     
@@ -31,7 +23,7 @@ client.on('message', message =>{
 /*--------------------------------------------------------*/
     if(auteur != 'ISN bot#5674'){ 
         /*detecte la commande de la blague et en raconte une aleatoirement*/
-        if(message.content.match(/647166866329960462> raconte moi une blague/i)){
+        if(message.content.match(/!!blague/i)){
             var blague = Math.floor(Math.random()*30)
             switch(blague){
                 case 0:
@@ -132,7 +124,14 @@ client.on('message', message =>{
                     break;
             }
         }
+ /*--------------------------------------------------------*/
+    
+/*                  sondage hearthstone                    */
+    
+/*---------------------------------------------------------*/
+    
     }
+    
 
 
 });
