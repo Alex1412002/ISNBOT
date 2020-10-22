@@ -11,7 +11,7 @@ client.on('ready', () => {
 /*quand un message est envoyé dans un chat*/
 client.on('message', message =>{ 
     auteur = message.author.tag /*ligne pour simplifier et epurer le code*/
-    if(message.content.match(/!!status/i)) {
+    if(message.content.match(/!!statut/i)) {
         message.channel.send("je suis en ligne");
     }
 
