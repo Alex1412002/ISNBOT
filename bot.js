@@ -171,6 +171,7 @@ client.on('message', message =>{
                         message.channel.send(infos[1]);
                         x = 1
                     }
+                }
                 if (x !== 1){
                     message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                 }
