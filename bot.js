@@ -151,7 +151,7 @@ client.on('message', message =>{
         if(message.content.match(/!!hscardsee/i)) {
             for (i = 0; i <= extension.length; i++) {
                 if(extension.length === 0){
-                    message.channel.send("cette carte est inconnue. est ce le nom exact ?");
+                    message.channel.send("liste vide ");
                 }
                 else {
                     infos = extension[i]
@@ -159,7 +159,7 @@ client.on('message', message =>{
                         message.channel.send("fait");
                     }
                     else {
-                        message.channel.send("cette carte est inconnue. est ce le nom exact ?");
+                        message.channel.send("wut ?");
                     }
                 }
                     
