@@ -162,7 +162,7 @@ client.on('message', message =>{
                     infos = extension[i]
                     nom = message.content.slice(12,message.content.length)
                     if(message.content.length < 25){
-                        for (i = 0; i <= 25 - message.content.length; i++) {
+                        for (i = 0; i <= 24 - message.content.length; i++) {
                             nom = nom +" "
                         }
                     }
