@@ -155,12 +155,19 @@ client.on('message', message =>{
                 }
                 else {
                     infos = extension[i]
-                    if(message.content.slice(12,message.content.length) === infos[0]){ 
+                    nom = message.content.slice(12,message.content.length)
+                    if(message.content.length < 25){
+                        for (i = 0; i <= 25 - message.content.length; i++) {
+                            nom = nom +" "
+                        }
+                    }
+                    if(nom === infos[0]){ 
                         message.channel.send(infos[1]);
                     }
                     else {
                         message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                     }
+                    
                 }
                     
             }
@@ -168,8 +175,6 @@ client.on('message', message =>{
         }
         
     }
-    
-
 
 });
 
