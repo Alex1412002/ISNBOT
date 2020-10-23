@@ -131,7 +131,7 @@ client.on('message', message =>{
                     message.channel.send(" A quoi reconnaît-on le slip de Dark Vador ?\nA son côté obscur !")
                     break;
                 default:
-                    message.channel.send("Y a pas de blague la")
+                    message.channel.send("Y a pas de blague la") 
                     break;
             }
         }
