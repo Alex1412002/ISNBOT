@@ -147,7 +147,7 @@ client.on('message', message =>{
                     x = 1+i
                     if (nom.slice(1+i,2+i) === " ")break;                   
                 }
-                extension.push([nom.slice(0,x),nom.slice(x+1,message.content.length),[],0]);
+                extension.push([nom.slice(0,x),nom.slice(x+1,message.content.length),[0],0]);
                 message.delete();
             }
             else {
@@ -172,7 +172,7 @@ client.on('message', message =>{
                             x = x + racap[i]
                         }
                         x = x + note
-                        x = x/(recap.length+1)
+                        x = x/(recap.length)
                         extension[i] = [nom,infos[1],recap.push(note),x];
                         x = 1
                     }
