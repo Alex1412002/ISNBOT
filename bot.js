@@ -134,7 +134,15 @@ client.on('message', message =>{
 /*                  sondage hearthstone                    */
     
 /*---------------------------------------------------------*/
-    /*    if(message.content.match(/!!hsaddcard/i)) { */
+        if(message.content.match(/!!hsaddcard/i)) {
+            message.channel.send("cette commande est desactivé pour des raisons pratiques");
+        }
+        if(message.content.match(/!!hsvote/i)) {
+            message.channel.send("cette commande est bientot dispo");
+        }
+        if(message.content.match(/!!hsvotesee/i)) {
+            message.channel.send("cette commande est bientot dispo");
+        }
     }
     
 
