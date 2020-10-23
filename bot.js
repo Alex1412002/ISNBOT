@@ -139,12 +139,16 @@ client.on('message', message =>{
             message.delete();
             message.channel.send(extension);
         }
-        if(message.content.match(/!!hsvote/i)) {
-            message.channel.send("cette commande est bientot dispo");
-        }
+
         if(message.content.match(/!!hsvotesee/i)) {
             message.channel.send("cette commande est bientot dispo");
         }
+        if(message.content.match(/!!hscardsee/i)) {
+            message.delete();
+            message.channel.send("cette commande est bientot dispo");
+            message.channel.send("https://i.imgur.com/vlNSFoy.png");
+        }
+        
     }
     
 
