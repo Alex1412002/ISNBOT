@@ -169,7 +169,7 @@ client.on('message', message =>{
                     if(nom === infos[0]){ 
                         recap =infos[2]
                         for (i = 0; i < recap.length; i++) {
-                            x = x + racap[i]
+                            x = x + recap[i]
                         }
                         x = x + note
                         x = x/(recap.length)
