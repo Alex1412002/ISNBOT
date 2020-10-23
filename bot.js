@@ -146,14 +146,19 @@ client.on('message', message =>{
             message.channel.send("cette commande est bientot dispo");
         }
         if(message.content.match(/!!hscardsee/i)) {
-            for (i = 0; i < extension.lenght; i++) {
-                infos = extension[i]
-                if(message.content.slice(12,message.content.length) === infos[0]){ 
-                    message.channel.send(infos[1]);
-                    message.channel.send("fait");
+            for (i = 0; i <= extension.length; i++) {
+                if(extension.length === 0){
+                    message.channel.send("cette carte est inconnue. est ce le nom exact ?");
                 }
                 else {
-                    message.channel.send("cette carte est inconnue. est ce le nom exact ?");
+                    infos = extension[i]
+                    if(message.content.slice(12,message.content.length) === infos[0]){ 
+                        message.channel.send(infos[1]);
+                        message.channel.send("fait");
+                    }
+                    else {
+                        message.channel.send("cette carte est inconnue. est ce le nom exact ?");
+                    }
                 }
                     
             }
