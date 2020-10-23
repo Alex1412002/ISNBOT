@@ -169,11 +169,10 @@ client.on('message', message =>{
                     nom = message.content.slice(12,message.content.length)
                     if(nom === infos[0]){ 
                         message.channel.send(infos[1]);
+                        x = 1
                     }
-                    else {
-                        message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
-                    }
-                    
+                if (x !== 1){
+                    message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                 }
                     
             }
