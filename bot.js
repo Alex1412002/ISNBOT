@@ -172,7 +172,7 @@ client.on('message', message =>{
                             x = x + racap[i]
                         }
                         x = x + note
-                        x = x/(recap.lenght+1)
+                        x = x/(recap.length+1)
                         extension[i] = [nom,infos[1],recap.push(note),x];
                         x = 1
                     }
