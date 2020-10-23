@@ -5,6 +5,7 @@ var extension = []
 var infos = 0
 var nom = ""
 var i = 0
+var x = 0
 
 
 /*Check de la connexion*/
@@ -139,7 +140,12 @@ client.on('message', message =>{
 /*---------------------------------------------------------*/
         if(message.content.match(/!!hsaddcard/i)) {
             if (message.content.length >= 40){
-                extension.push([message.content.slice(12,37),message.content.slice(38,message.content.length)]);
+                nom = message.content.slice(12,message.content.length)
+                for (i = 0;; i++) { 
+                    x = 1+i
+                    if (nom.slice(1+i,2+i) === " ")break;                   
+                }
+                extension.push([nom.slice(1,x),nom.slice(x+1,message.content.length)]);
                 message.delete();
             }
             else {
@@ -161,11 +167,6 @@ client.on('message', message =>{
                 else {
                     infos = extension[i]
                     nom = message.content.slice(12,message.content.length)
-                    if(message.content.length < 25){
-                        for (i = 0; i <= 24 - message.content.length; i++) {
-                            nom = nom +" "
-                        }
-                    }
                     if(nom === infos[0]){ 
                         message.channel.send(infos[1]);
                     }
