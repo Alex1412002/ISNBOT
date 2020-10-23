@@ -155,7 +155,7 @@ client.on('message', message =>{
             }      
         }
         if(message.content.match(/!!hsvotecard/i)) { 
-            nom = message.content.slice(12,message.content.length)
+            nom = message.content.slice(13,message.content.length)
             if (extension.length !==0){
                 for (i = 0;; i++) { 
                         x = 1+i
