@@ -135,7 +135,8 @@ client.on('message', message =>{
     
 /*---------------------------------------------------------*/
         if(message.content.match(/!!hsaddcard/i)) {
-            extension.push([message.content.slice(12,37),message.content.slice(39,message.content.length)]);
+            extension.push([message.content.slice(12,37),message.content.slice(38,message.content.length)]);
+            message.delete();
             message.channel.send(extension);
         }
         if(message.content.match(/!!hsvote/i)) {
