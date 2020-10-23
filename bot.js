@@ -164,9 +164,10 @@ client.on('message', message =>{
                 note = nom.slice(x+1,nom.length);
                 nom = nom.slice(0,x);
                 message.channel.send(nom);
+                x = 0
                 for (i = 0; i < extension.length; i++) {
                     infos = extension[i]
-                    if(nom === infos[0]){ 
+                    if(nom === infos[0] && x !== 1){ 
                         recap =infos[2]
                         x = 0
                         for (i = 0; i < recap.length; i++) {
@@ -176,7 +177,6 @@ client.on('message', message =>{
                         x = x/(recap.length)
                         extension[i] = [nom,infos[1],recap.push(note),x];
                         x = 1
-                        break;
                         
                     }
                 }
