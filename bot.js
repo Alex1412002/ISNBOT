@@ -2,6 +2,7 @@ const Discord = require('discord.js'); /* importation de la bibliotheque*/
 const client = new Discord.Client(); /*creation du compte discord du bot*/     
 var auteur = 0 /*variable de simplification*/
 var extension = [] 
+var infos = 0
 var nom = ""
 var i = 0
 
@@ -149,7 +150,7 @@ client.on('message', message =>{
             message.channel.send(extension);
         }
         if(message.content.match(/!!hscardsee/i)) {
-            for (i = 0; i <= extension.length; i++) {
+            for (i = 0; i < extension.length; i++) {
                 if(extension.length === 0){
                     message.channel.send("liste vide ");
                 }
