@@ -168,6 +168,7 @@ client.on('message', message =>{
                     infos = extension[i]
                     if(nom === infos[0]){ 
                         recap =infos[2]
+                        x = 0
                         for (i = 0; i < recap.length; i++) {
                             x = x + recap[i]
                         }
@@ -175,6 +176,8 @@ client.on('message', message =>{
                         x = x/(recap.length)
                         extension[i] = [nom,infos[1],recap.push(note),x];
                         x = 1
+                        break;
+                        
                     }
                 }
                 if (x !== 1) {
