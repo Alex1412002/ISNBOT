@@ -1,6 +1,7 @@
 const Discord = require('discord.js'); /* importation de la bibliotheque*/  
 const client = new Discord.Client(); /*creation du compte discord du bot*/     
 var auteur = 0 /*variable de simplification*/
+var extension = [] 
 
 
 /*Check de la connexion*/
@@ -24,7 +25,7 @@ client.on('message', message =>{
             message.channel.send(message.content.slice(7,message.content.length));
         }
         if(message.content.match(/!!help/i)) {
-        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - *coming soon*"  );
+        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - `!!hsaddcard {nom} {lien vers imgur}` *desactivé* : ajoute une carte a la librairie de vote\n - `!!hsvote {nom de la carte}` *coming soon* : permet de voter pour une carte\n - `!!hsvotesee {nom de carte}` *coming soon* : voir la moyenne du vote d'une carte"  );
         }
         /*detecte la commande de la blague et en raconte une aleatoirement*/
         if(message.content.match(/!!blague/i)){
@@ -133,7 +134,7 @@ client.on('message', message =>{
 /*                  sondage hearthstone                    */
     
 /*---------------------------------------------------------*/
-    
+    /*    if(message.content.match(/!!hsaddcard/i)) { */
     }
     
 
