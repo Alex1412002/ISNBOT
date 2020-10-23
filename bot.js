@@ -148,7 +148,7 @@ client.on('message', message =>{
         if(message.content.match(/!!seelist/i)) {
             message.channel.send(extension);
         }
-        /*if(message.content.match(/!!hscardsee/i)) {
+        if(message.content.match(/!!hscardsee/i)) {
             for (i = 0; i <= extension.length; i++) {
                 if(extension.length === 0){
                     message.channel.send("cette carte est inconnue. est ce le nom exact ?");
@@ -165,7 +165,7 @@ client.on('message', message =>{
                     
             }
             
-        }*/
+        }
         
     }
     
