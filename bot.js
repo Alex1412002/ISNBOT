@@ -138,8 +138,13 @@ client.on('message', message =>{
     
 /*---------------------------------------------------------*/
         if(message.content.match(/!!hsaddcard/i)) {
-            extension.push([message.content.slice(12,37),message.content.slice(38,message.content.length)]);
-            message.delete();
+            if (message.content.length >= 40){
+                extension.push([message.content.slice(12,37),message.content.slice(38,message.content.length)]);
+                message.delete();
+            }
+            else {
+                message.channel.send("il manque un argument");
+            }      
         }
 
         if(message.content.match(/!!hsvotesee/i)) {
