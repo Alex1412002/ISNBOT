@@ -163,6 +163,7 @@ client.on('message', message =>{
                 }
                 note = nom.slice(x+1,nom.length);
                 nom = nom.slice(0,x);
+                message.channel.send(nom);
                 for (i = 0; i < extension.length; i++) {
                     infos = extension[i]
                     if(nom === infos[0]){ 
