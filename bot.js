@@ -135,7 +135,8 @@ client.on('message', message =>{
     
 /*---------------------------------------------------------*/
         if(message.content.match(/!!hsaddcard/i)) {
-            message.channel.send("cette commande est desactivé pour des raisons pratiques");
+            extension.push([message.content.slice(12,27),message.content.slice(29,message.content.length)];
+            message.channel.send(extension);
         }
         if(message.content.match(/!!hsvote/i)) {
             message.channel.send("cette commande est bientot dispo");
