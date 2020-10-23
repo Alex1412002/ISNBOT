@@ -149,7 +149,7 @@ client.on('message', message =>{
             message.delete();
             for (i = 0; i < extension.lenght; i++) {
                 infos = extension[i]
-                if(message.content.slice(11,message.content.length) === infos[0]){ 
+                if(message.content.slice(12,message.content.length) === infos[0]){ 
                     message.channel.send(infos[1]);
                 }
                 else {
