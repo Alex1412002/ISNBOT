@@ -2,6 +2,8 @@ const Discord = require('discord.js'); /* importation de la bibliotheque*/
 const client = new Discord.Client(); /*creation du compte discord du bot*/     
 var auteur = 0 /*variable de simplification*/
 var extension = [] 
+var nom = ""
+var i = 0
 
 
 /*Check de la connexion*/
@@ -145,8 +147,17 @@ client.on('message', message =>{
         }
         if(message.content.match(/!!hscardsee/i)) {
             message.delete();
-            message.channel.send("cette commande est bientot dispo");
-            message.channel.send("https://i.imgur.com/vlNSFoy.png");
+            for (i = 0; i < extension.lenght; i++) {
+                infos = extension[i]
+                if(message.content.slice(11,message.content.length) === infos[0]){ 
+                    message.channel.send(infos[1]);
+                }
+                else {
+                    message.channel.send("cette carte est inconnue. est ce le nom exact ?);
+                }
+                    
+            }
+            
         }
         
     }
