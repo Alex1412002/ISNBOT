@@ -140,7 +140,6 @@ client.on('message', message =>{
         if(message.content.match(/!!hsaddcard/i)) {
             extension.push([message.content.slice(12,37),message.content.slice(38,message.content.length)]);
             message.delete();
-            message.channel.send(extension);
         }
 
         if(message.content.match(/!!hsvotesee/i)) {
@@ -152,15 +151,15 @@ client.on('message', message =>{
         if(message.content.match(/!!hscardsee/i)) {
             for (i = 0; i < extension.length; i++) {
                 if(extension.length === 0){
-                    message.channel.send("liste vide ");
+                    message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                 }
                 else {
                     infos = extension[i]
                     if(message.content.slice(12,message.content.length) === infos[0]){ 
-                        message.channel.send("fait");
+                        message.channel.send(infos[1]);
                     }
                     else {
-                        message.channel.send("wut ?");
+                        message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                     }
                 }
                     
