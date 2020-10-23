@@ -12,7 +12,7 @@ var recap = 0
 
 /*Check de la connexion*/
 client.on('ready', () => {
-    console.log('pret a casser des culs'); /*affichage dans la console*/
+    console.log('pret a casser des culs'); /*affichage dans la console*/ 
     
 })
 /*quand un message est envoyé dans un chat*/
