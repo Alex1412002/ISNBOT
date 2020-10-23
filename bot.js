@@ -145,7 +145,7 @@ client.on('message', message =>{
                     x = 1+i
                     if (nom.slice(1+i,2+i) === " ")break;                   
                 }
-                extension.push([nom.slice(1,x),nom.slice(x+1,message.content.length)]);
+                extension.push([nom.slice(0,x),nom.slice(x+1,message.content.length)]);
                 message.delete();
             }
             else {
@@ -160,11 +160,11 @@ client.on('message', message =>{
             message.channel.send(extension);
         }
         if(message.content.match(/!!hscardsee/i)) {
-            for (i = 0; i < extension.length; i++) {
-                if(extension.length === 0){
+            if(extension.length === 0){
                     message.channel.send("mauvais");
-                }
-                else {
+            }
+            else {
+                for (i = 0; i < extension.length; i++) {
                     infos = extension[i]
                     nom = message.content.slice(12,message.content.length)
                     if(nom === infos[0]){ 
