@@ -156,7 +156,6 @@ client.on('message', message =>{
                 else {
                     infos = extension[i]
                     if(message.content.slice(12,message.content.length) === infos[0]){ 
-                        message.channel.send(infos[1]);
                         message.channel.send("fait");
                     }
                     else {
