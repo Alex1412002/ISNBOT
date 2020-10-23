@@ -156,7 +156,7 @@ client.on('message', message =>{
         if(message.content.match(/!!hscardsee/i)) {
             for (i = 0; i < extension.length; i++) {
                 if(extension.length === 0){
-                    message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
+                    message.channel.send("mauvais");
                 }
                 else {
                     infos = extension[i]
