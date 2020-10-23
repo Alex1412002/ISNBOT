@@ -6,6 +6,8 @@ var infos = 0
 var nom = ""
 var i = 0
 var x = 0
+var note = 0
+var moyenne = 0
 
 
 /*Check de la connexion*/
@@ -29,7 +31,7 @@ client.on('message', message =>{
             message.channel.send(message.content.slice(7,message.content.length));
         }
         if(message.content.match(/!!help/i)) {
-        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - `!!hsaddcard {nom} {lien vers imgur}` *desactivé* : ajoute une carte a la librairie de vote\n - `!!hsvote {nom de la carte}` *coming soon* : permet de voter pour une carte\n - `!!hsvotesee {nom de carte}` *coming soon* : voir la moyenne du vote d'une carte"  );
+        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - `!!hsaddcard {nom} {lien vers imgur}` *desactivé* : ajoute une carte a la librairie de vote\nv- `!!hscardsee {nom de la carte}` *coming soon*: affiche la carte choisie - `!!hsvotecard {nom de la carte}` *coming soon* : permet de voter pour une carte\n - `!!hsvotesee {nom de carte}` *coming soon* : voir la moyenne du vote d'une carte"  );
         }
         /*detecte la commande de la blague et en raconte une aleatoirement*/
         if(message.content.match(/!!blague/i)){
@@ -138,21 +140,49 @@ client.on('message', message =>{
 /*                  sondage hearthstone                    */
     
 /*---------------------------------------------------------*/
-        if(message.content.match(/!!hsaddcard/i)) {
+        if(message.content.match(/!!hsaddcard/i) && auteur === "Alex1412002#9761") {
             if (message.content.length >= 40){
                 nom = message.content.slice(12,message.content.length)
                 for (i = 0;; i++) { 
                     x = 1+i
                     if (nom.slice(1+i,2+i) === " ")break;                   
                 }
-                extension.push([nom.slice(0,x),nom.slice(x+1,message.content.length)]);
+                extension.push([nom.slice(0,x),nom.slice(x+1,message.content.length),[],0]);
                 message.delete();
             }
             else {
                 message.channel.send("il manque un argument");
             }      
         }
-
+        if(message.content.match(/!!hsvotecard/i)) { 
+            nom = message.content.slice(12,message.content.length)
+            if (extension.length !==0){
+                for (i = 0;; i++) { 
+                        x = 1+i
+                        if (nom.slice(1+i,2+i) === " ")break;                   
+                }
+                nom = nom.slice(0,x);
+                note = nom.slice(x+1,nom.length)
+                for (i = 0; i < extension.length; i++) {
+                    infos = extension[i]
+                    if(nom === infos[0]){ 
+                        recap =infos[2]
+                        for (i = 0; i < recap.length; i++) {
+                            x = x + racap[i]
+                        }
+                        x = x + note
+                        x = x/(recap.lenght+1)
+                        extension[i] = [nom,infos[1],recap.push(note),x];
+                        x = 1
+                    }
+                }
+                if (x !== 1) {
+                    message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
+                }
+                        
+             }
+                
+        }
         if(message.content.match(/!!hsvotesee/i)) {
             message.channel.send("cette commande est bientot dispo");
         }
@@ -169,6 +199,7 @@ client.on('message', message =>{
                     nom = message.content.slice(12,message.content.length)
                     if(nom === infos[0]){ 
                         message.channel.send(infos[1]);
+                        message.channel.send("note actuelle : "+ infos[3]);
                         x = 1
                     }
                 }
