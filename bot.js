@@ -2,6 +2,7 @@ const Discord = require('discord.js'); /* importation de la bibliotheque*/
 const client = new Discord.Client(); /*creation du compte discord du bot*/     
 var auteur = 0 /*variable de simplification*/
 var extension = [] 
+var extension2 = []
 var infos = 0
 var nom = ""
 var i = 0
@@ -165,9 +166,10 @@ client.on('message', message =>{
                 nom = nom.slice(0,x);
                 message.channel.send(nom);
                 x = 0
+                extension2 = []
                 for (i = 0; i < extension.length; i++) {
                     infos = extension[i]
-                    if(nom === infos[0] && x !== 1){ 
+                    if(nom === infos[0]){ 
                         recap =infos[2]
                         x = 0
                         for (i = 0; i < recap.length; i++) {
@@ -175,10 +177,15 @@ client.on('message', message =>{
                         }
                         x = x + note
                         x = x/(recap.length)
-                        extension[i] = [nom,infos[1],recap.push(note),x];
+                        extension2.push([nom,infos[1],recap.push(note),x]);
                         x = 1
                         
                     }
+                    else {
+                        extension2.push([infos[0],infos[1],infos[2],infos[3]])
+                    }
+                    extension = extension2
+                    extension2 = []
                 }
                 if (x !== 1) {
                     message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
