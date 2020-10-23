@@ -8,7 +8,7 @@ var i = 0
 var x = 0
 var note = 0
 var moyenne = 0
-
+var recap = 0
 
 /*Check de la connexion*/
 client.on('ready', () => {
@@ -31,7 +31,7 @@ client.on('message', message =>{
             message.channel.send(message.content.slice(7,message.content.length));
         }
         if(message.content.match(/!!help/i)) {
-        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - `!!hsaddcard {nom} {lien vers imgur}` *desactivé* : ajoute une carte a la librairie de vote\nv- `!!hscardsee {nom de la carte}` *coming soon*: affiche la carte choisie - `!!hsvotecard {nom de la carte}` *coming soon* : permet de voter pour une carte\n - `!!hsvotesee {nom de carte}` *coming soon* : voir la moyenne du vote d'une carte"  );
+        message.channel.send("__Liste des commandes :__\n\n - `!!statut` : pour check si je suis la\n - `!!blague` : pour une bonne boutade\n - `!!hsaddcard {nom} {lien vers imgur}` *desactivé* : ajoute une carte a la librairie de vote\n - `!!hscardsee {nom de la carte}` *coming soon*: affiche la carte choisie\n - `!!hsvotecard {nom de la carte}` *coming soon* : permet de voter pour une carte");
         }
         /*detecte la commande de la blague et en raconte une aleatoirement*/
         if(message.content.match(/!!blague/i)){
@@ -161,8 +161,8 @@ client.on('message', message =>{
                         x = 1+i
                         if (nom.slice(1+i,2+i) === " ")break;                   
                 }
+                note = nom.slice(x+1,nom.length);
                 nom = nom.slice(0,x);
-                note = nom.slice(x+1,nom.length)
                 for (i = 0; i < extension.length; i++) {
                     infos = extension[i]
                     if(nom === infos[0]){ 
@@ -182,9 +182,6 @@ client.on('message', message =>{
                         
              }
                 
-        }
-        if(message.content.match(/!!hsvotesee/i)) {
-            message.channel.send("cette commande est bientot dispo");
         }
         if(message.content.match(/!!seelist/i)) {
             message.channel.send(extension);
