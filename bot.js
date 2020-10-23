@@ -159,13 +159,13 @@ client.on('message', message =>{
                         message.channel.send("fait");
                     }
                     else {
-                        message.channel.send("cette carte est inconnue. est ce le nom exact ?");*/
+                        message.channel.send("cette carte est inconnue. est ce le nom exact ?");
                     }
                 }
                     
             }
             
-        }
+        }*/
         
     }
     
