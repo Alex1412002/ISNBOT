@@ -157,41 +157,37 @@ client.on('message', message =>{
         }
         if(message.content.match(/!!hsvotecard/i)) { 
             nom = message.content.slice(13,message.content.length)
-            if (extension.length !==0){
-                for (i = 0;; i++) { 
-                        x = 1+i
-                        if (nom.slice(1+i,2+i) === " ")break;                   
-                }
-                note = nom.slice(x+1,nom.length);
-                nom = nom.slice(0,x);
-                message.channel.send(nom);
-                x = 0
-                extension2 = []
-                for (i = 0; i < extension.length; i++) {
-                    infos = extension[i]
-                    if(nom === infos[0]){ 
-                        recap =infos[2]
-                        x = 0
-                        for (i = 0; i < recap.length; i++) {
-                            x = x + recap[i]
-                        }
-                        x = x + note
-                        x = x/(recap.length)
-                        extension2.push([nom,infos[1],recap.push(note),x]);
-                        x = 1
-                        
+            for (i = 0;; i++) { 
+                    x = 1+i
+                    if (nom.slice(1+i,2+i) === " ")break;                   
+            }
+            note = nom.slice(x+1,nom.length);
+            nom = nom.slice(0,x);
+            message.channel.send(nom);
+            x = 0
+            extension2 = []
+            for (i = 0; i < extension.length; i++) {
+                infos = extension[i]
+                if(nom === infos[0]){ 
+                    recap =infos[2 
+                    for (i = 0; i < recap.length; i++) {
+                        x = x + recap[i]
                     }
-                    else {
-                        extension2.push([infos[0],infos[1],infos[2],infos[3]])
-                    }
+                    x = x + note
+                    x = x/(recap.length)
+                    extension2.push([nom,infos[1],recap.push(note),x]);
+                    x = 1
 
                 }
-                extension = extension2
-                if (x !== 1) {
-                    message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
+                else {
+                    extension2.push([infos[0],infos[1],infos[2],infos[3]])
                 }
-                        
-             }
+
+            }
+            extension = extension2
+            if (x !== 1) {
+                message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
+            } 
                 
         }
         if(message.content.match(/!!seelist/i)) {
