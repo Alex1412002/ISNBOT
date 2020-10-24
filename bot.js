@@ -187,7 +187,6 @@ client.on('message', message =>{
 
                 }
                 extension = extension2
-                extension2 = []
                 if (x !== 1) {
                     message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
                 }
