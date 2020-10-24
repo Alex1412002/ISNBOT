@@ -8,7 +8,6 @@ var nom = ""
 var i = 0
 var x = 0
 var note = 0
-var moyenne = 0
 var recap = 0
 
 /*Check de la connexion*/
@@ -169,14 +168,14 @@ client.on('message', message =>{
             for (i = 0; i < extension.length; i++) {
                 infos = extension[i]
                 if(nom === infos[0]){ 
-                    recap =infos[2 
+                    recap = infos[2]
                     for (i = 0; i < recap.length; i++) {
                         x = x + recap[i]
                     }
                     x = x + note
                     x = x/(recap.length)
-                    extension2.push([nom,infos[1],recap.push(note),x]);
-                    x = 1
+                    extension2.push([infos[0],infos[1],recap.push(note),x]);
+                    x = 1   
 
                 }
                 else {
@@ -185,6 +184,7 @@ client.on('message', message =>{
 
             }
             extension = extension2
+            message.channel.send(extension);
             if (x !== 1) {
                 message.channel.send("cette carte n'est pas dans ma base de données. Existe t'elle ?");
             } 
@@ -195,7 +195,7 @@ client.on('message', message =>{
         }
         if(message.content.match(/!!hscardsee/i)) {
             if(extension.length === 0){
-                    message.channel.send("mauvais");
+                    message.channel.send("il n'y a rien dans la base de donnée");
             }
             else {
                 for (i = 0; i < extension.length; i++) {
